@@ -1,0 +1,191 @@
+{
+    "en": {
+        "nav": {
+            "home": "Home",
+            "frameworks": "Frameworks",
+            "about": "About",
+            "resources": "Resources"
+        },
+        "hero": {
+            "title": "Product Framework Guide",
+            "subtitle": "Your comprehensive guide to product management frameworks and methodologies"
+        },
+        "categories": {
+            "title": "Framework Categories",
+            "priority": {
+                "title": "Priority Frameworks",
+                "description": "Frameworks for deciding what to build next",
+                "examples": ["RICE Framework", "MoSCoW Method", "Value vs Effort", "And more..."]
+            },
+            "discovery": {
+                "title": "Discovery Frameworks",
+                "description": "Frameworks for understanding user needs",
+                "examples": ["Jobs To Be Done", "Design Thinking", "Lean Canvas", "And more..."]
+            },
+            "strategy": {
+                "title": "Strategy Frameworks",
+                "description": "Frameworks for product strategy and vision",
+                "examples": ["Product Vision Board", "Business Model Canvas", "Porter's Five Forces", "And more..."]
+            },
+            "metrics": {
+                "title": "Metrics Frameworks",
+                "description": "Frameworks for measuring success",
+                "examples": ["HEART Framework", "Pirate Metrics (AARRR)", "North Star Framework", "And more..."]
+            },
+            "development": {
+                "title": "Development Frameworks",
+                "description": "Frameworks for building products",
+                "examples": ["Agile Development", "Dual-Track Agile", "Shape Up", "And more..."]
+            },
+            "growth": {
+                "title": "Growth Frameworks",
+                "description": "Frameworks for scaling products",
+                "examples": ["Growth Loop", "Hook Model", "ICE Framework", "And more..."]
+            }
+        },
+        "about": {
+            "title": "About This Guide",
+            "description": "This comprehensive guide is designed to help product managers, designers, and developers understand and apply various product management frameworks. Each framework is explained with practical examples and interactive visualizations to make learning easier and more engaging.",
+            "features": {
+                "charts": {
+                    "title": "📊 Interactive Charts",
+                    "description": "Visual representations to better understand frameworks"
+                },
+                "examples": {
+                    "title": "💡 Practical Examples",
+                    "description": "Real-world applications of each framework"
+                },
+                "comparisons": {
+                    "title": "🔄 Framework Comparisons",
+                    "description": "Understanding when to use which framework"
+                }
+            }
+        }
+    },
+    "zh_tw": {
+        "nav": {
+            "home": "首頁",
+            "frameworks": "框架",
+            "about": "關於",
+            "resources": "資源"
+        },
+        "hero": {
+            "title": "產品框架指南",
+            "subtitle": "您的完整產品管理框架與方法論指南"
+        },
+        "categories": {
+            "title": "框架分類",
+            "priority": {
+                "title": "優先級框架",
+                "description": "決定下一步開發內容的框架",
+                "examples": ["RICE 框架", "MoSCoW 方法", "價值效益評估", "更多..."]
+            },
+            "discovery": {
+                "title": "探索框架",
+                "description": "理解用戶需求的框架",
+                "examples": ["工作待完成", "設計思考", "精實畫布", "更多..."]
+            },
+            "strategy": {
+                "title": "策略框架",
+                "description": "產品策略和願景的框架",
+                "examples": ["產品願景板", "商業模式畫布", "波特五力分析", "更多..."]
+            },
+            "metrics": {
+                "title": "指標框架",
+                "description": "衡量成功的框架",
+                "examples": ["HEART 框架", "海盜指標 (AARRR)", "北極星指標", "更多..."]
+            },
+            "development": {
+                "title": "開發框架",
+                "description": "建構產品的框架",
+                "examples": ["敏捷開發", "雙軌敏捷", "Shape Up", "更多..."]
+            },
+            "growth": {
+                "title": "成長框架",
+                "description": "擴展產品的框架",
+                "examples": ["成長循環", "鉤子模型", "ICE 框架", "更多..."]
+            }
+        },
+        "about": {
+            "title": "關於本指南",
+            "description": "這份完整指南旨在幫助產品經理、設計師和開發人員理解並應用各種產品管理框架。每個框架都配有實際案例和互動式視覺化，使學習更容易且更具吸引力。",
+            "features": {
+                "charts": {
+                    "title": "📊 互動圖表",
+                    "description": "更好理解框架的視覺化呈現"
+                },
+                "examples": {
+                    "title": "💡 實際案例",
+                    "description": "框架的實際應用案例"
+                },
+                "comparisons": {
+                    "title": "🔄 框架比較",
+                    "description": "了解何時使用哪個框架"
+                }
+            }
+        }
+    },
+    "zh_cn": {
+        "nav": {
+            "home": "首页",
+            "frameworks": "框架",
+            "about": "关于",
+            "resources": "资源"
+        },
+        "hero": {
+            "title": "产品框架指南",
+            "subtitle": "您的完整产品管理框架与方法论指南"
+        },
+        "categories": {
+            "title": "框架分类",
+            "priority": {
+                "title": "优先级框架",
+                "description": "决定下一步开发内容的框架",
+                "examples": ["RICE 框架", "MoSCoW 方法", "价值效益评估", "更多..."]
+            },
+            "discovery": {
+                "title": "探索框架",
+                "description": "理解用户需求的框架",
+                "examples": ["工作待完成", "设计思考", "精益画布", "更多..."]
+            },
+            "strategy": {
+                "title": "策略框架",
+                "description": "产品策略和愿景的框架",
+                "examples": ["产品愿景板", "商业模式画布", "波特五力分析", "更多..."]
+            },
+            "metrics": {
+                "title": "指标框架",
+                "description": "衡量成功的框架",
+                "examples": ["HEART 框架", "海盗指标 (AARRR)", "北极星指标", "更多..."]
+            },
+            "development": {
+                "title": "开发框架",
+                "description": "构建产品的框架",
+                "examples": ["敏捷开发", "双轨敏捷", "Shape Up", "更多..."]
+            },
+            "growth": {
+                "title": "成长框架",
+                "description": "扩展产品的框架",
+                "examples": ["成长循环", "钩子模型", "ICE 框架", "更多..."]
+            }
+        },
+        "about": {
+            "title": "关于本指南",
+            "description": "这份完整指南旨在帮助产品经理、设计师和开发人员理解并应用各种产品管理框架。每个框架都配有实际案例和互动式可视化，使学习更容易且更具吸引力。",
+            "features": {
+                "charts": {
+                    "title": "📊 互动图表",
+                    "description": "更好理解框架的可视化呈现"
+                },
+                "examples": {
+                    "title": "💡 实际案例",
+                    "description": "框架的实际应用案例"
+                },
+                "comparisons": {
+                    "title": "🔄 框架比较",
+                    "description": "了解何时使用哪个框架"
+                }
+            }
+        }
+    }
+}

@@ -11,6 +11,26 @@ A comprehensive guide to product management frameworks with multilingual support
 - 🔄 Framework comparisons
 - 📱 Responsive design
 
+## 🚀 Project Status
+
+### Completed Features
+- ✅ Basic website structure and design
+- ✅ Multilingual support implementation
+- ✅ Framework category pages structure
+- ✅ Responsive navigation
+- ✅ GitHub Pages deployment
+
+### In Progress
+- 🔄 Adding detailed framework content
+- 🔄 Improving interactive visualizations
+- 🔄 Enhancing mobile responsiveness
+
+### Upcoming Features
+- 📝 User contributions system
+- 🔍 Search functionality
+- 📊 Interactive framework comparison tool
+- 📱 PWA support
+
 ## 🛠 Frameworks Covered
 
 1. **Priority Frameworks**
@@ -43,12 +63,21 @@ A comprehensive guide to product management frameworks with multilingual support
    - Hook Model
    - ICE Framework
 
-## 🚀 Getting Started
+## 🌍 Language Support
+
+The website supports three languages:
+- English (en)
+- Traditional Chinese (zh_tw)
+- Simplified Chinese (zh_cn)
+
+Language files are stored in the `i18n` directory and can be easily extended to support more languages.
+
+## 💻 Development
 
 ### Prerequisites
 
 - Python 3.x
-- Flask
+- Flask (for local development)
 
 ### Installation
 
@@ -70,30 +99,38 @@ python3 server.py
 
 4. Visit http://localhost:8000 in your browser
 
-## 🌍 Language Support
+### Production Deployment
 
-The website supports three languages:
-- English (en)
-- Traditional Chinese (zh_tw)
-- Simplified Chinese (zh_cn)
-
-Language files are stored in the `i18n` directory and can be easily extended to support more languages.
+The website is deployed using GitHub Pages and can be accessed at:
+https://injaytseng.github.io/product-framework-website/
 
 ## 📁 Project Structure
 
 ```
 product-framework-website/
-├── frameworks/           # Framework-specific pages
-├── i18n/                # Internationalization files
-├── styles.css           # Global styles
-├── scripts.js           # Global scripts
-├── index.html           # Main page
-└── server.py           # Development server
+├── docs/                # GitHub Pages deployment files
+│   ├── frameworks/     # Framework-specific pages
+│   ├── i18n/          # Internationalization files
+│   ├── styles.css     # Global styles
+│   └── index.html     # Main page
+├── server.py          # Development server
+└── requirements.txt   # Python dependencies
 ```
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Here's how you can help:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+Areas where we'd love contributions:
+- Adding new framework descriptions
+- Improving translations
+- Enhancing visualizations
+- Adding interactive examples
+- Improving documentation
 
 ## 📝 License
 
@@ -103,3 +140,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Thanks to all the product management thought leaders who developed these frameworks
 - Special thanks to the open source community for tools and libraries used in this project
+- Contributors who help improve and maintain this resource

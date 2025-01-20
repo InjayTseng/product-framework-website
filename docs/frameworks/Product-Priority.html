@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Priority Frameworks - Product Frameworks Guide</title>
+    <meta name="description" content="Comprehensive guide to product prioritization frameworks including RICE, Kano Model, and Value vs Effort">
+    <title>Product Prioritization Frameworks - Product Framework Guide</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -13,6 +14,7 @@
             <div class="logo"><a href="../index.html">Product Frameworks</a></div>
             <ul>
                 <li><a href="../index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
                 <li><a href="#frameworks">Frameworks</a></li>
                 <li><a href="#comparison">Comparison</a></li>
                 <li><a href="#resources">Resources</a></li>
@@ -21,355 +23,262 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <h1>Product Priority Frameworks</h1>
-            <p>Explore frameworks that help teams make better prioritization decisions</p>
+        <section id="overview" class="hero">
+            <h1>Product Prioritization Frameworks</h1>
+            <p>Make better decisions with proven prioritization frameworks</p>
         </section>
 
-        <section id="frameworks">
-            <h2>Priority Frameworks</h2>
-            
+        <section id="frameworks" class="frameworks-detail">
             <!-- RICE Framework -->
-            <div class="framework-card">
-                <h3>RICE Framework</h3>
-                <p class="framework-intro">A quantitative prioritization framework that helps teams evaluate initiatives based on four factors.</p>
-                
-                <div class="formula-section">
-                    <h4>RICE Score Formula</h4>
-                    <div class="formula">
-                        <p class="formula-text">RICE Score = (Reach × Impact × Confidence) ÷ Effort</p>
-                    </div>
-                    <ul class="formula-notes">
-                        <li>Higher RICE score = Higher priority</li>
-                        <li>All components should use consistent time periods (e.g., per quarter)</li>
-                        <li>Final score helps compare different initiatives objectively</li>
-                    </ul>
+            <div class="framework-detail-card">
+                <div class="framework-header">
+                    <i class="fas fa-balance-scale"></i>
+                    <h2>RICE Framework</h2>
                 </div>
-
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>R - Reach</h4>
-                        <p>Number of people/events impacted in a specific time period</p>
-                        <div class="metric-example">Example: 500 users per month</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>I - Impact</h4>
-                        <p>Effect on target metric (Scale: 0.25-3)</p>
-                        <ul>
-                            <li>3.0 = Massive impact</li>
-                            <li>2.0 = High impact</li>
-                            <li>1.0 = Medium impact</li>
-                            <li>0.5 = Low impact</li>
-                            <li>0.25 = Minimal impact</li>
-                        </ul>
-                    </div>
-                    <div class="framework-component">
-                        <h4>C - Confidence</h4>
-                        <p>Confidence level in estimates</p>
-                        <ul>
-                            <li>100% = High confidence</li>
-                            <li>80% = Medium confidence</li>
-                            <li>50% = Low confidence</li>
-                        </ul>
-                    </div>
-                    <div class="framework-component">
-                        <h4>E - Effort</h4>
-                        <p>Estimated person-months required</p>
-                        <div class="metric-example">Example: 2.5 person-months</div>
-                    </div>
-                </div>
-
-                <div class="example-calculation">
-                    <h4>Example Calculation</h4>
-                    <div class="calculation-details">
-                        <p>Feature: Add search functionality</p>
-                        <ul>
-                            <li>Reach: 5000 users/quarter</li>
-                            <li>Impact: 2.0 (High impact)</li>
-                            <li>Confidence: 80% (0.8)</li>
-                            <li>Effort: 3 person-months</li>
-                        </ul>
-                        <p class="calculation-result">RICE Score = (5000 × 2.0 × 0.8) ÷ 3 = 2666.67</p>
-                    </div>
-                </div>
-
-                <canvas id="riceChart"></canvas>
-            </div>
-
-            <!-- MoSCoW Framework -->
-            <div class="framework-card">
-                <h3>MoSCoW Framework</h3>
-                <p class="framework-intro">A prioritization method used to quickly identify what's critical versus what's desirable.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Must Have</h4>
-                        <p>Critical requirements that must be delivered</p>
-                        <div class="example-box">Example: Core authentication system</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Should Have</h4>
-                        <p>Important but not vital features</p>
-                        <div class="example-box">Example: Advanced search filters</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Could Have</h4>
-                        <p>Desired but not necessary features</p>
-                        <div class="example-box">Example: Theme customization</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Won't Have</h4>
-                        <p>Features that won't be implemented in this phase</p>
-                        <div class="example-box">Example: Voice chat support</div>
+                <div class="framework-content">
+                    <p class="framework-intro">A quantitative prioritization framework that helps teams evaluate initiatives based on four key factors: Reach, Impact, Confidence, and Effort.</p>
+                    
+                    <div class="framework-section">
+                        <h3><i class="fas fa-calculator"></i> Scoring Components</h3>
+                        <div class="rice-components">
+                            <div class="rice-component">
+                                <h4><i class="fas fa-users"></i> Reach</h4>
+                                <p>Number of people/events impacted in a given time period</p>
+                                <div class="metric-guide">
+                                    <div class="metric-example">
+                                        <span>Example</span>
+                                        <p>500 users per quarter</p>
+                                    </div>
+                                    <div class="metric-tip">
+                                        <span>Measurement</span>
+                                        <p>Users, transactions, or events</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rice-component">
+                                <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                                <p>How much this will affect each person</p>
+                                <div class="impact-scale">
+                                    <div class="scale-item">
+                                        <span>0.25x</span>
+                                        <p>Minimal</p>
+                                    </div>
+                                    <div class="scale-item">
+                                        <span>1x</span>
+                                        <p>Medium</p>
+                                    </div>
+                                    <div class="scale-item">
+                                        <span>3x</span>
+                                        <p>High</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rice-component">
+                                <h4><i class="fas fa-check-circle"></i> Confidence</h4>
+                                <p>How confident you are in your estimates</p>
+                                <div class="confidence-levels">
+                                    <div class="level">
+                                        <span>100%</span>
+                                        <p>High confidence</p>
+                                    </div>
+                                    <div class="level">
+                                        <span>80%</span>
+                                        <p>Medium confidence</p>
+                                    </div>
+                                    <div class="level">
+                                        <span>50%</span>
+                                        <p>Low confidence</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rice-component">
+                                <h4><i class="fas fa-clock"></i> Effort</h4>
+                                <p>Time required from all team members</p>
+                                <div class="effort-estimate">
+                                    <div class="estimate">
+                                        <span>Person-Months</span>
+                                        <p>Total time across team</p>
+                                    </div>
+                                    <div class="formula">
+                                        <span>RICE Score = (Reach × Impact × Confidence) ÷ Effort</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <canvas id="moscowChart"></canvas>
-            </div>
-
-            <!-- Value vs Effort Framework -->
-            <div class="framework-card">
-                <h3>Value vs Effort Framework</h3>
-                <p class="framework-intro">A simple yet effective framework that evaluates tasks based on their value contribution and implementation effort.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>High Value / Low Effort</h4>
-                        <p>Quick wins that should be implemented immediately</p>
-                        <div class="example-box">Example: Bug fixes, UI improvements</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>High Value / High Effort</h4>
-                        <p>Strategic projects that need careful planning</p>
-                        <div class="example-box">Example: Platform migration</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Low Value / Low Effort</h4>
-                        <p>Tasks to consider when resources are available</p>
-                        <div class="example-box">Example: Minor feature enhancements</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Low Value / High Effort</h4>
-                        <p>Tasks to avoid or postpone</p>
-                        <div class="example-box">Example: Nice-to-have complex features</div>
-                    </div>
-                </div>
-                <canvas id="valueEffortChart"></canvas>
-            </div>
-
-            <!-- Eisenhower Matrix -->
-            <div class="framework-card">
-                <h3>Eisenhower Matrix</h3>
-                <p class="framework-intro">A time-management framework that helps prioritize tasks based on urgency and importance.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Important & Urgent</h4>
-                        <p>Tasks requiring immediate attention</p>
-                        <div class="example-box">Example: Critical bug fixes</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Important & Not Urgent</h4>
-                        <p>Tasks to schedule for later</p>
-                        <div class="example-box">Example: Strategic planning</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Not Important & Urgent</h4>
-                        <p>Tasks to delegate</p>
-                        <div class="example-box">Example: Routine maintenance</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Not Important & Not Urgent</h4>
-                        <p>Tasks to eliminate</p>
-                        <div class="example-box">Example: Unnecessary meetings</div>
-                    </div>
-                </div>
-                <canvas id="eisenhowerChart"></canvas>
             </div>
 
             <!-- Kano Model -->
-            <div class="framework-card">
-                <h3>Kano Model</h3>
-                <p class="framework-intro">A framework for prioritizing features based on customer satisfaction and feature implementation.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Basic Needs (Must-Have)</h4>
-                        <p>Features that must be present to avoid dissatisfaction</p>
-                        <div class="example-box">Example: Login functionality</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Performance Needs</h4>
-                        <p>Features that increase satisfaction with better implementation</p>
-                        <div class="example-box">Example: Page load speed</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Delighters</h4>
-                        <p>Unexpected features that create high satisfaction</p>
-                        <div class="example-box">Example: AI-powered recommendations</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Indifferent & Reverse</h4>
-                        <p>Features that don't affect or negatively impact satisfaction</p>
-                        <div class="example-box">Example: Unnecessary complexity</div>
+            <div class="framework-detail-card">
+                <div class="framework-header">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>Kano Model</h2>
+                </div>
+                <div class="framework-content">
+                    <p class="framework-intro">A model for feature prioritization based on customer satisfaction and investment in implementation.</p>
+                    
+                    <div class="framework-section">
+                        <h3><i class="fas fa-list-ul"></i> Feature Categories</h3>
+                        <div class="kano-categories">
+                            <div class="kano-category">
+                                <h4><i class="fas fa-star"></i> Basic Features</h4>
+                                <p>Must-have functionality that users expect</p>
+                                <ul>
+                                    <li>Expected by users</li>
+                                    <li>Cause dissatisfaction if missing</li>
+                                    <li>Basic functionality or existing</li>
+                                    <li>Don't increase satisfaction when present</li>
+                                </ul>
+                            </div>
+                            <div class="kano-category">
+                                <h4><i class="fas fa-chart-line"></i> Performance Features</h4>
+                                <p>Features that directly correlate with satisfaction</p>
+                                <ul>
+                                    <li>Better implementation = more satisfaction</li>
+                                    <li>Linear relationship with user satisfaction</li>
+                                    <li>Competitive differentiators</li>
+                                </ul>
+                            </div>
+                            <div class="kano-category">
+                                <h4><i class="fas fa-gift"></i> Excitement Features</h4>
+                                <p>Unexpected features that delight users</p>
+                                <ul>
+                                    <li>Unexpected delighters</li>
+                                    <li>No dissatisfaction if missing</li>
+                                    <li>High satisfaction when present</li>
+                                </ul>
+                            </div>
+                            <div class="kano-category">
+                                <h4><i class="fas fa-minus-circle"></i> Indifferent Features</h4>
+                                <p>Features that don't significantly impact satisfaction</p>
+                                <ul>
+                                    <li>Low impact on satisfaction</li>
+                                    <li>Users don't care much</li>
+                                    <li>Consider avoiding</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <canvas id="kanoChart"></canvas>
             </div>
 
-            <!-- ICE Framework -->
-            <div class="framework-card">
-                <h3>ICE Scoring Framework</h3>
-                <p class="framework-intro">A quick prioritization framework based on Impact, Confidence, and Ease.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Impact</h4>
-                        <p>Potential effect on key metrics (Scale: 1-10)</p>
-                        <div class="example-box">Example: Revenue increase potential</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Confidence</h4>
-                        <p>Certainty in estimates (Scale: 1-10)</p>
-                        <div class="example-box">Example: Based on market research</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Ease</h4>
-                        <p>Implementation difficulty (Scale: 1-10)</p>
-                        <div class="example-box">Example: Technical complexity level</div>
+            <!-- Value vs Effort -->
+            <div class="framework-detail-card">
+                <div class="framework-header">
+                    <i class="fas fa-balance-scale-right"></i>
+                    <h2>Value vs Effort</h2>
+                </div>
+                <div class="framework-content">
+                    <p class="framework-intro">A simple but effective way to prioritize features by comparing their potential value against the effort required to implement them.</p>
+                    
+                    <div class="framework-section">
+                        <h3><i class="fas fa-th-large"></i> Quadrants</h3>
+                        <div class="value-effort-matrix">
+                            <div class="matrix-quadrant high-value-low-effort">
+                                <h4>Quick Wins</h4>
+                                <p>High Value, Low Effort</p>
+                                <ul>
+                                    <li>Immediate priority</li>
+                                    <li>Easy to implement</li>
+                                    <li>Fast ROI</li>
+                                </ul>
+                            </div>
+                            <div class="matrix-quadrant high-value-high-effort">
+                                <h4>Major Projects</h4>
+                                <p>High Value, High Effort</p>
+                                <ul>
+                                    <li>Strategic initiatives</li>
+                                    <li>Careful planning needed</li>
+                                    <li>Long-term investment</li>
+                                </ul>
+                            </div>
+                            <div class="matrix-quadrant low-value-low-effort">
+                                <h4>Fill-ins</h4>
+                                <p>Low Value, Low Effort</p>
+                                <ul>
+                                    <li>Nice to have</li>
+                                    <li>Do when resources available</li>
+                                    <li>Quick improvements</li>
+                                </ul>
+                            </div>
+                            <div class="matrix-quadrant low-value-high-effort">
+                                <h4>Time Sinks</h4>
+                                <p>Low Value, High Effort</p>
+                                <ul>
+                                    <li>Avoid or postpone</li>
+                                    <li>Question necessity</li>
+                                    <li>Look for alternatives</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <canvas id="iceChart"></canvas>
-            </div>
-
-            <!-- WSJF Framework -->
-            <div class="framework-card">
-                <h3>WSJF (Weighted Shortest Job First)</h3>
-                <p class="framework-intro">A framework that prioritizes jobs based on their cost of delay and job size.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Business Value</h4>
-                        <p>Direct customer or business benefit</p>
-                        <div class="example-box">Example: Revenue impact</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Time Criticality</h4>
-                        <p>Urgency and time sensitivity</p>
-                        <div class="example-box">Example: Market window opportunity</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Risk Reduction</h4>
-                        <p>Opportunity to reduce future risks</p>
-                        <div class="example-box">Example: Technical debt reduction</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Job Size</h4>
-                        <p>Effort required to complete</p>
-                        <div class="example-box">Example: Development time estimate</div>
-                    </div>
-                </div>
-                <canvas id="wsjfChart"></canvas>
-            </div>
-
-            <!-- Opportunity Scoring -->
-            <div class="framework-card">
-                <h3>Opportunity Scoring</h3>
-                <p class="framework-intro">A framework that identifies opportunities based on importance and satisfaction gaps.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Importance</h4>
-                        <p>How important is this feature to users?</p>
-                        <div class="example-box">Example: User survey results</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Satisfaction</h4>
-                        <p>How satisfied are users currently?</p>
-                        <div class="example-box">Example: Current feature ratings</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Opportunity Score</h4>
-                        <p>Importance - Satisfaction = Opportunity</p>
-                        <div class="example-box">Example: High importance, low satisfaction = High opportunity</div>
-                    </div>
-                </div>
-                <canvas id="opportunityChart"></canvas>
-            </div>
-
-            <!-- HEART Framework -->
-            <div class="framework-card">
-                <h3>HEART Framework</h3>
-                <p class="framework-intro">Google's framework for measuring user experience success.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Happiness</h4>
-                        <p>User satisfaction and attitude</p>
-                        <div class="example-box">Example: User satisfaction surveys</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Engagement</h4>
-                        <p>User involvement and interaction</p>
-                        <div class="example-box">Example: Session duration</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Adoption</h4>
-                        <p>New user acquisition</p>
-                        <div class="example-box">Example: New user signups</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Retention</h4>
-                        <p>User return rate</p>
-                        <div class="example-box">Example: Monthly active users</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Task Success</h4>
-                        <p>User goal completion</p>
-                        <div class="example-box">Example: Conversion rates</div>
-                    </div>
-                </div>
-                <canvas id="heartChart"></canvas>
-            </div>
-
-            <!-- Eisenhower-MoSCoW -->
-            <div class="framework-card">
-                <h3>Eisenhower-MoSCoW Hybrid</h3>
-                <p class="framework-intro">A combined framework that merges urgency-importance with MoSCoW prioritization.</p>
-                <div class="framework-details">
-                    <div class="framework-component">
-                        <h4>Must Have (Important & Urgent)</h4>
-                        <p>Critical features that need immediate attention</p>
-                        <div class="example-box">Example: Security patches</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Should Have (Important & Not Urgent)</h4>
-                        <p>Important features that can be planned</p>
-                        <div class="example-box">Example: Performance optimization</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Could Have (Not Important & Urgent)</h4>
-                        <p>Features that can be delegated</p>
-                        <div class="example-box">Example: Minor UI updates</div>
-                    </div>
-                    <div class="framework-component">
-                        <h4>Won't Have (Not Important & Not Urgent)</h4>
-                        <p>Features to eliminate or postpone</p>
-                        <div class="example-box">Example: Nice-to-have features</div>
-                    </div>
-                </div>
-                <canvas id="hybridChart"></canvas>
             </div>
         </section>
 
-        <section id="resources">
+        <section id="comparison" class="framework-comparison">
+            <h2>Framework Comparison</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Framework</th>
+                            <th>Best For</th>
+                            <th>Complexity</th>
+                            <th>Time Investment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RICE</td>
+                            <td>Data-driven decisions</td>
+                            <td>High</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>Kano Model</td>
+                            <td>Feature classification</td>
+                            <td>Medium</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Value vs Effort</td>
+                            <td>Quick decisions</td>
+                            <td>Low</td>
+                            <td>Low</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="resources" class="resources-section">
             <h2>Additional Resources</h2>
             <div class="resources-grid">
                 <div class="resource-card">
-                    <h3>Books</h3>
+                    <h3><i class="fas fa-book"></i> Books</h3>
                     <ul>
-                        <li>Sprint (Jake Knapp)</li>
-                        <li>Lean Product Playbook</li>
-                        <li>Inspired (Marty Cagan)</li>
+                        <li>"Prioritize" by Nate Walkingshaw</li>
+                        <li>"Product Roadmaps Relaunched" by C. Todd Lombardo</li>
+                        <li>"The Lean Product Playbook" by Dan Olsen</li>
                     </ul>
                 </div>
                 <div class="resource-card">
-                    <h3>Online Courses</h3>
+                    <h3><i class="fas fa-video"></i> Video Courses</h3>
                     <ul>
-                        <li>Product Management Fundamentals</li>
-                        <li>Design Thinking Certification</li>
-                        <li>Agile Product Development</li>
+                        <li>Product Prioritization Techniques</li>
+                        <li>Feature Prioritization Masterclass</li>
+                        <li>Roadmap Planning Essentials</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <ul>
+                        <li>ProductPlan for Roadmapping</li>
+                        <li>Aha! for Feature Planning</li>
+                        <li>Productboard for Prioritization</li>
+                        <li>Airfocus for Decision Making</li>
                     </ul>
                 </div>
             </div>
@@ -377,9 +286,28 @@
     </main>
 
     <footer>
-        <p> 2025 Product Frameworks Guide. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product Frameworks Guide</h3>
+                <p>Making product decisions easier, one framework at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#frameworks">Frameworks</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Have questions or suggestions? <a href="mailto:contact@productframeworks.guide">Email us</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> 2025 Product Framework Guide. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script src="../scripts.js"></script>
 </body>
 </html>

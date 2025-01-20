@@ -17,30 +17,10 @@ class I18n {
 
     async loadTranslations() {
         try {
-            // Use the full GitHub Pages URL path
-            const basePath = '/product-framework-website';
-            const response = await fetch(`${basePath}/i18n/translations.json`);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            const response = await fetch('/i18n/translations.json');
             this.translations = await response.json();
         } catch (error) {
             console.error('Failed to load translations:', error);
-            // Fallback translations
-            this.translations = {
-                "en": {
-                    "nav": {
-                        "home": "Home",
-                        "frameworks": "Frameworks",
-                        "about": "About",
-                        "resources": "Resources"
-                    },
-                    "hero": {
-                        "title": "Product Framework Guide",
-                        "subtitle": "Your comprehensive guide to product management frameworks and methodologies"
-                    }
-                }
-            };
         }
     }
 
@@ -72,7 +52,6 @@ class I18n {
             if (translation && translation[k]) {
                 translation = translation[k];
             } else {
-                console.warn(`Translation missing for key: ${key}`);
                 return key;
             }
         }

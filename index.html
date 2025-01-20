@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to product management frameworks including RICE, MoSCoW, Value vs Effort, and more.">
     <title data-i18n="hero.title">Product Framework Guide</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -16,7 +20,7 @@
                 <li><a href="#about" data-i18n="nav.about">About</a></li>
                 <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
             </ul>
-            <!-- Language switcher will be inserted here by i18n.js -->
+            <div class="language-switcher"></div>
         </nav>
     </header>
 
@@ -24,6 +28,10 @@
         <section id="home" class="hero">
             <h1 data-i18n="hero.title">Product Framework Guide</h1>
             <p data-i18n="hero.subtitle">Your comprehensive guide to product management frameworks and methodologies</p>
+            <div class="hero-cta">
+                <a href="#frameworks" class="cta-button">Explore Frameworks</a>
+                <a href="#about" class="cta-button secondary">Learn More</a>
+            </div>
         </section>
 
         <section id="frameworks" class="framework-categories">
@@ -31,78 +39,108 @@
             <div class="category-grid">
                 <a href="frameworks/Product-Priority.html" class="category-card">
                     <div class="category-content">
-                        <h3 data-i18n="categories.priority.title">Priority Frameworks</h3>
-                        <p data-i18n="categories.priority.description">Frameworks for deciding what to build next</p>
+                        <div class="category-header">
+                            <i class="fas fa-list-ol"></i>
+                            <h3 data-i18n="categories.priority.title">Priority Frameworks</h3>
+                        </div>
+                        <p data-i18n="categories.priority.description">Make data-driven decisions on what to build next</p>
                         <ul>
-                            <li data-i18n="categories.priority.examples.0">RICE Framework</li>
-                            <li data-i18n="categories.priority.examples.1">MoSCoW Method</li>
-                            <li data-i18n="categories.priority.examples.2">Value vs Effort</li>
-                            <li data-i18n="categories.priority.examples.3">And more...</li>
+                            <li><i class="fas fa-calculator"></i> RICE Framework</li>
+                            <li><i class="fas fa-tasks"></i> MoSCoW Method</li>
+                            <li><i class="fas fa-balance-scale"></i> Value vs Effort</li>
+                            <li><i class="fas fa-chart-line"></i> ICE Scoring</li>
+                            <li><i class="fas fa-weight"></i> Weighted Scoring</li>
+                            <li><i class="fas fa-chart-bar"></i> Kano Model</li>
                         </ul>
                     </div>
                 </a>
 
                 <a href="frameworks/Product-Discovery.html" class="category-card">
                     <div class="category-content">
-                        <h3 data-i18n="categories.discovery.title">Discovery Frameworks</h3>
-                        <p data-i18n="categories.discovery.description">Frameworks for understanding user needs</p>
+                        <div class="category-header">
+                            <i class="fas fa-search"></i>
+                            <h3 data-i18n="categories.discovery.title">Discovery Frameworks</h3>
+                        </div>
+                        <p data-i18n="categories.discovery.description">Understand user needs and validate solutions</p>
                         <ul>
-                            <li data-i18n="categories.discovery.examples.0">Jobs To Be Done</li>
-                            <li data-i18n="categories.discovery.examples.1">Design Thinking</li>
-                            <li data-i18n="categories.discovery.examples.2">Lean Canvas</li>
-                            <li data-i18n="categories.discovery.examples.3">And more...</li>
+                            <li><i class="fas fa-briefcase"></i> Jobs To Be Done</li>
+                            <li><i class="fas fa-lightbulb"></i> Design Thinking</li>
+                            <li><i class="fas fa-clipboard-check"></i> Lean Canvas</li>
+                            <li><i class="fas fa-map"></i> User Story Mapping</li>
+                            <li><i class="fas fa-sitemap"></i> Opportunity Solution Tree</li>
+                            <li><i class="fas fa-puzzle-piece"></i> Problem Solution Fit</li>
                         </ul>
                     </div>
                 </a>
 
                 <a href="frameworks/Product-Strategy.html" class="category-card">
                     <div class="category-content">
-                        <h3 data-i18n="categories.strategy.title">Strategy Frameworks</h3>
-                        <p data-i18n="categories.strategy.description">Frameworks for product strategy and vision</p>
+                        <div class="category-header">
+                            <i class="fas fa-chess"></i>
+                            <h3 data-i18n="categories.strategy.title">Strategy Frameworks</h3>
+                        </div>
+                        <p data-i18n="categories.strategy.description">Define and execute product strategy effectively</p>
                         <ul>
-                            <li data-i18n="categories.strategy.examples.0">Product Vision Board</li>
-                            <li data-i18n="categories.strategy.examples.1">Business Model Canvas</li>
-                            <li data-i18n="categories.strategy.examples.2">Porter's Five Forces</li>
-                            <li data-i18n="categories.strategy.examples.3">And more...</li>
+                            <li><i class="fas fa-eye"></i> Product Vision Board</li>
+                            <li><i class="fas fa-building"></i> Business Model Canvas</li>
+                            <li><i class="fas fa-bullseye"></i> OKRs Framework</li>
+                            <li><i class="fas fa-fist-raised"></i> Porter's Five Forces</li>
+                            <li><i class="fas fa-chart-pie"></i> SWOT Analysis</li>
+                            <li><i class="fas fa-water"></i> Blue Ocean Strategy</li>
                         </ul>
                     </div>
                 </a>
 
                 <a href="frameworks/Product-Metrics.html" class="category-card">
                     <div class="category-content">
-                        <h3 data-i18n="categories.metrics.title">Metrics Frameworks</h3>
+                        <div class="category-header">
+                            <i class="fas fa-chart-bar"></i>
+                            <h3 data-i18n="categories.metrics.title">Metrics Frameworks</h3>
+                        </div>
                         <p data-i18n="categories.metrics.description">Frameworks for measuring success</p>
                         <ul>
-                            <li data-i18n="categories.metrics.examples.0">HEART Framework</li>
-                            <li data-i18n="categories.metrics.examples.1">Pirate Metrics (AARRR)</li>
-                            <li data-i18n="categories.metrics.examples.2">North Star Framework</li>
-                            <li data-i18n="categories.metrics.examples.3">And more...</li>
+                            <li><i class="fas fa-heart"></i> HEART Framework</li>
+                            <li><i class="fas fa-skull-crossbones"></i> Pirate Metrics (AARRR)</li>
+                            <li><i class="fas fa-star"></i> North Star Framework</li>
+                            <li><i class="fas fa-flag-checkered"></i> Goals Signals Metrics</li>
+                            <li><i class="fas fa-analytics"></i> Product Analytics Framework</li>
+                            <li><i class="fas fa-user-check"></i> Retention Metrics Framework</li>
                         </ul>
                     </div>
                 </a>
 
                 <a href="frameworks/Product-Development.html" class="category-card">
                     <div class="category-content">
-                        <h3 data-i18n="categories.development.title">Development Frameworks</h3>
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3 data-i18n="categories.development.title">Development Frameworks</h3>
+                        </div>
                         <p data-i18n="categories.development.description">Frameworks for building products</p>
                         <ul>
-                            <li data-i18n="categories.development.examples.0">Agile Development</li>
-                            <li data-i18n="categories.development.examples.1">Dual-Track Agile</li>
-                            <li data-i18n="categories.development.examples.2">Shape Up</li>
-                            <li data-i18n="categories.development.examples.3">And more...</li>
+                            <li><i class="fas fa-sync"></i> Agile Development</li>
+                            <li><i class="fas fa-random"></i> Dual-Track Agile</li>
+                            <li><i class="fas fa-shapes"></i> Shape Up</li>
+                            <li><i class="fas fa-feather"></i> Lean Development</li>
+                            <li><i class="fas fa-running"></i> Scrum Framework</li>
+                            <li><i class="fas fa-tasks"></i> Kanban Method</li>
                         </ul>
                     </div>
                 </a>
 
                 <a href="frameworks/Product-Growth.html" class="category-card">
                     <div class="category-content">
-                        <h3 data-i18n="categories.growth.title">Growth Frameworks</h3>
+                        <div class="category-header">
+                            <i class="fas fa-rocket"></i>
+                            <h3 data-i18n="categories.growth.title">Growth Frameworks</h3>
+                        </div>
                         <p data-i18n="categories.growth.description">Frameworks for scaling products</p>
                         <ul>
-                            <li data-i18n="categories.growth.examples.0">Growth Loop</li>
-                            <li data-i18n="categories.growth.examples.1">Hook Model</li>
-                            <li data-i18n="categories.growth.examples.2">ICE Framework</li>
-                            <li data-i18n="categories.growth.examples.3">And more...</li>
+                            <li><i class="fas fa-sync-alt"></i> Growth Loop</li>
+                            <li><i class="fas fa-link"></i> Hook Model</li>
+                            <li><i class="fas fa-pyramid"></i> Growth Pyramid</li>
+                            <li><i class="fas fa-chart-line"></i> Sean Ellis Framework</li>
+                            <li><i class="fas fa-seedling"></i> Product-Led Growth</li>
+                            <li><i class="fas fa-share-alt"></i> Viral Growth Models</li>
                         </ul>
                     </div>
                 </a>
@@ -112,68 +150,81 @@
         <section id="about" class="about-section">
             <h2 data-i18n="about.title">About This Guide</h2>
             <div class="about-content">
-                <p data-i18n="about.description">This comprehensive guide is designed to help product managers, designers, and developers understand and apply various product management frameworks. Each framework is explained with practical examples and interactive visualizations to make learning easier and more engaging.</p>
-                <div class="features">
-                    <div class="feature">
-                        <h4 data-i18n="about.features.charts.title">📊 Interactive Charts</h4>
-                        <p data-i18n="about.features.charts.description">Visual representations to better understand frameworks</p>
+                <div class="about-text">
+                    <p>This comprehensive guide is designed to help product managers, developers, and stakeholders make better product decisions. Each framework is explained with practical examples and implementation guides.</p>
+                    <h3>Why Use Product Frameworks?</h3>
+                    <ul class="benefits-list">
+                        <li>Make data-driven decisions</li>
+                        <li>Align team objectives</li>
+                        <li>Improve product outcomes</li>
+                        <li>Standardize decision-making processes</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h4>15+</h4>
+                        <p>Frameworks</p>
                     </div>
-                    <div class="feature">
-                        <h4 data-i18n="about.features.examples.title">💡 Practical Examples</h4>
-                        <p data-i18n="about.features.examples.description">Real-world applications of each framework</p>
+                    <div class="stat-card">
+                        <h4>50+</h4>
+                        <p>Examples</p>
                     </div>
-                    <div class="feature">
-                        <h4 data-i18n="about.features.comparisons.title">🔄 Framework Comparisons</h4>
-                        <p data-i18n="about.features.comparisons.description">Understanding when to use which framework</p>
+                    <div class="stat-card">
+                        <h4>100+</h4>
+                        <p>Resources</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="resources">
+        <section id="resources" class="resources-section">
             <h2 data-i18n="resources.title">Additional Resources</h2>
             <div class="resources-grid">
                 <div class="resource-card">
-                    <h3 data-i18n="resources.books.title">Books</h3>
-                    <ul>
-                        <li data-i18n="resources.books.items.0">Sprint (Jake Knapp)</li>
-                        <li data-i18n="resources.books.items.1">Lean Product Playbook</li>
-                        <li data-i18n="resources.books.items.2">Inspired (Marty Cagan)</li>
-                        <li data-i18n="resources.books.items.3">Hooked (Nir Eyal)</li>
-                        <li data-i18n="resources.books.items.4">Continuous Discovery Habits</li>
-                    </ul>
+                    <h3>Templates</h3>
+                    <p>Ready-to-use templates for each framework</p>
+                    <a href="docs/templates.html" class="resource-link">View Templates</a>
                 </div>
                 <div class="resource-card">
-                    <h3 data-i18n="resources.courses.title">Online Courses</h3>
-                    <ul>
-                        <li data-i18n="resources.courses.items.0">Product Management Fundamentals</li>
-                        <li data-i18n="resources.courses.items.1">Design Thinking Certification</li>
-                        <li data-i18n="resources.courses.items.2">Agile Product Development</li>
-                        <li data-i18n="resources.courses.items.3">Growth Product Management</li>
-                        <li data-i18n="resources.courses.items.4">Product Analytics</li>
-                    </ul>
+                    <h3>Case Studies</h3>
+                    <p>Real-world applications and success stories</p>
+                    <a href="docs/case-studies.html" class="resource-link">Read Cases</a>
                 </div>
                 <div class="resource-card">
-                    <h3 data-i18n="resources.communities.title">Communities</h3>
-                    <ul>
-                        <li data-i18n="resources.communities.items.0">Product School</li>
-                        <li data-i18n="resources.communities.items.1">Mind the Product</li>
-                        <li data-i18n="resources.communities.items.2">Product Hunt</li>
-                        <li data-i18n="resources.communities.items.3">Product-Led Growth Hub</li>
-                        <li data-i18n="resources.communities.items.4">Product Management HQ</li>
-                    </ul>
+                    <h3>Best Practices</h3>
+                    <p>Tips and guidelines for implementation</p>
+                    <a href="docs/best-practices.html" class="resource-link">Learn More</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 <span data-i18n="hero.title">Product Framework Guide</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product Frameworks Guide</h3>
+                <p>Making product decisions easier, one framework at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#frameworks">Frameworks</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Have questions or suggestions? <a href="mailto:contact@productframeworks.guide">Email us</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> 2025 Product Framework Guide. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script type="module">
-        import i18n from './i18n/i18n.js';
-        i18n.init();
-    </script>
+    <script src="scripts.js"></script>
+    <script src="i18n/i18n.js"></script>
 </body>
 </html>

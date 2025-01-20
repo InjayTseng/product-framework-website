@@ -6,7 +6,7 @@ A comprehensive guide to product management frameworks with multilingual support
 
 - 📚 Extensive collection of product management frameworks
 - 🌐 Multilingual support (English, Traditional Chinese, Simplified Chinese)
-- 📊 Interactive visualizations
+- 📊 Interactive visualizations and scoring systems
 - 💡 Practical examples and use cases
 - 🔄 Framework comparisons
 - 📱 Responsive design
@@ -19,49 +19,69 @@ A comprehensive guide to product management frameworks with multilingual support
 - ✅ Framework category pages structure
 - ✅ Responsive navigation
 - ✅ GitHub Pages deployment
+- ✅ Interactive framework components
+- ✅ Framework comparison tables
+- ✅ Mobile-responsive layouts
+- ✅ Visual styling and animations
 
 ### In Progress
-- 🔄 Adding detailed framework content
-- 🔄 Improving interactive visualizations
-- 🔄 Enhancing mobile responsiveness
+- 🔄 Adding more framework examples
+- 🔄 Enhancing interactive visualizations
+- 🔄 Expanding resource sections
 
 ### Upcoming Features
 - 📝 User contributions system
 - 🔍 Search functionality
-- 📊 Interactive framework comparison tool
+- 📊 Interactive framework selection tool
 - 📱 PWA support
 
 ## 🛠 Frameworks Covered
 
 1. **Priority Frameworks**
-   - RICE Framework
-   - MoSCoW Method
-   - Value vs Effort
+   - RICE Framework (Reach, Impact, Confidence, Effort)
+   - Kano Model (Basic, Performance, Excitement features)
+   - Value vs Effort Matrix
    
-2. **Discovery Frameworks**
-   - Jobs To Be Done
-   - Design Thinking
-   - Lean Canvas
-
-3. **Strategy Frameworks**
+2. **Strategy Frameworks**
    - Product Vision Board
    - Business Model Canvas
    - Porter's Five Forces
 
-4. **Metrics Frameworks**
-   - HEART Framework
+3. **Metrics Frameworks**
+   - HEART Framework (Happiness, Engagement, Adoption, Retention, Task Success)
    - Pirate Metrics (AARRR)
    - North Star Framework
 
-5. **Development Frameworks**
+4. **Development Frameworks**
    - Agile Development
-   - Dual-Track Agile
-   - Shape Up
+   - Scrum Framework
+   - Lean Development
 
-6. **Growth Frameworks**
+5. **Growth Frameworks**
    - Growth Loop
    - Hook Model
-   - ICE Framework
+   - ICE Framework (Impact, Confidence, Ease)
+
+## 🎨 Design Features
+
+### Interactive Components
+- Hover effects on framework cards
+- Visual scoring systems
+- Color-coded categories
+- Responsive grid layouts
+
+### Framework Sections
+- Detailed descriptions
+- Practical examples
+- Implementation guides
+- Visual comparisons
+- Additional resources
+
+### Mobile Optimization
+- Responsive grid systems
+- Adaptive layouts
+- Touch-friendly interactions
+- Optimized spacing
 
 ## 🌍 Language Support
 
@@ -76,10 +96,11 @@ Language files are stored in the `i18n` directory and can be easily extended to 
 
 ### Prerequisites
 
-- Python 3.x
-- Flask (for local development)
+- Modern web browser
+- Basic understanding of HTML/CSS
+- Text editor for modifications
 
-### Installation
+### Local Development
 
 1. Clone the repository
 ```bash
@@ -87,57 +108,28 @@ git clone https://github.com/InjayTseng/product-framework-website.git
 cd product-framework-website
 ```
 
-2. Install dependencies
+2. Open in browser
 ```bash
-pip install -r requirements.txt
+open index.html
 ```
 
-3. Run the development server
-```bash
-python3 server.py
-```
+3. Start modifying the files as needed
 
-4. Visit http://localhost:8000 in your browser
+## 📚 Resources
 
-### Production Deployment
-
-The website is deployed using GitHub Pages and can be accessed at:
-https://injaytseng.github.io/product-framework-website/
-
-## 📁 Project Structure
-
-```
-product-framework-website/
-├── docs/                # GitHub Pages deployment files
-│   ├── frameworks/     # Framework-specific pages
-│   ├── i18n/          # Internationalization files
-│   ├── styles.css     # Global styles
-│   └── index.html     # Main page
-├── server.py          # Development server
-└── requirements.txt   # Python dependencies
-```
+- Font Awesome for icons
+- Google Fonts for typography
+- Modern CSS features (Grid, Flexbox)
+- Responsive design principles
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Areas where we'd love contributions:
-- Adding new framework descriptions
-- Improving translations
-- Enhancing visualizations
-- Adding interactive examples
-- Improving documentation
-
-## 📝 License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## 👥 Authors
 
-- Thanks to all the product management thought leaders who developed these frameworks
-- Special thanks to the open source community for tools and libraries used in this project
-- Contributors who help improve and maintain this resource
+- Injay Tseng

@@ -9,6 +9,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Product Frameworks">
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
 </head>
 <body>
     <header>
@@ -19,8 +27,12 @@
                 <li><a href="#frameworks" data-i18n="nav.frameworks">Frameworks</a></li>
                 <li><a href="#about" data-i18n="nav.about">About</a></li>
                 <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
+                <li><a href="#calculator">Calculator</a></li>
             </ul>
             <div class="language-switcher"></div>
+            <button id="pwa-install" style="display: none;" class="install-button">
+                <i class="fas fa-download"></i> Install App
+            </button>
         </nav>
     </header>
 
@@ -175,6 +187,14 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="framework-comparison">
+                <h3>Framework Comparison</h3>
+                <p>See how different frameworks compare across key dimensions</p>
+                <div class="comparison-chart-container">
+                    <canvas id="frameworkComparisonChart"></canvas>
+                </div>
+            </div>
         </section>
 
         <section id="resources" class="resources-section">
@@ -196,6 +216,12 @@
                     <a href="docs/best-practices.html" class="resource-link">Learn More</a>
                 </div>
             </div>
+        </section>
+        
+        <section id="calculator" class="calculator-section">
+            <h2>Interactive Framework Calculator</h2>
+            <p class="section-intro">Try out different frameworks with your own data to see which works best for your needs.</p>
+            <div id="framework-calculator"></div>
         </section>
     </main>
 
@@ -226,5 +252,8 @@
 
     <script src="scripts.js"></script>
     <script src="i18n/i18n.js"></script>
+    <script src="pwa.js"></script>
+    <script src="enhanced-charts.js"></script>
+    <script src="framework-calculator.js"></script>
 </body>
 </html>

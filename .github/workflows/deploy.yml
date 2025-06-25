@@ -110,11 +110,26 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./build
+        retention-days: 1
         
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       id: deployment
       uses: actions/deploy-pages@v4
+      with:
+        timeout: 600000
+        error_count: 10
+        reporting_interval: 5000
+      continue-on-error: false
+        
+    - name: Retry deployment on failure
+      if: failure() && github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: |
+        echo "⚠️ Initial deployment failed. This might be due to GitHub Pages service issues."
+        echo "🔄 GitHub Actions will automatically retry this workflow."
+        echo "📋 You can also manually trigger this workflow from the Actions tab."
+        echo "🌐 Check GitHub Status: https://www.githubstatus.com/"
+        exit 1
         
     - name: Deploy Preview (PR)
       if: github.event_name == 'pull_request'

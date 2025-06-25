@@ -31,63 +31,99 @@
             <span class="current">Case Studies</span>
         </nav>
 
-        <section id="case-studies" class="hero">
-            <h1>Real-World Case Studies</h1>
-            <p>Learn from successful implementations of product management frameworks across different industries</p>
+        <section id="case-studies" class="hero modern-hero">
+            <div class="hero-background">
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Success Stories</span>
+                </div>
+                <h1>Real-World Case Studies</h1>
+                <p class="hero-subtitle">Learn from successful implementations of product management frameworks across different industries</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Companies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">87%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Frameworks</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="case-study-filters">
-            <div class="filter-controls">
-                <div class="filter-group">
-                    <label>Framework:</label>
-                    <select id="framework-filter">
-                        <option value="all">All Frameworks</option>
-                        <option value="rice">RICE</option>
-                        <option value="moscow">MoSCoW</option>
-                        <option value="okr">OKRs</option>
-                        <option value="heart">HEART</option>
-                        <option value="kano">Kano Model</option>
-                    </select>
+        <section class="case-study-filters modern-filters">
+            <div class="filters-container">
+                <div class="filters-header">
+                    <h3>Explore Case Studies</h3>
+                    <p>Filter by framework, industry, or company size to find relevant success stories</p>
                 </div>
-                <div class="filter-group">
-                    <label>Industry:</label>
-                    <select id="industry-filter">
-                        <option value="all">All Industries</option>
-                        <option value="saas">SaaS</option>
-                        <option value="ecommerce">E-commerce</option>
-                        <option value="mobile">Mobile Apps</option>
-                        <option value="fintech">FinTech</option>
-                        <option value="healthtech">HealthTech</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Company Size:</label>
-                    <select id="size-filter">
-                        <option value="all">All Sizes</option>
-                        <option value="startup">Startup (1-50)</option>
-                        <option value="scaleup">Scale-up (51-500)</option>
-                        <option value="enterprise">Enterprise (500+)</option>
-                    </select>
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label><i class="fas fa-cogs"></i> Framework</label>
+                        <select id="framework-filter" class="modern-select">
+                            <option value="all">All Frameworks</option>
+                            <option value="rice">RICE</option>
+                            <option value="moscow">MoSCoW</option>
+                            <option value="okr">OKRs</option>
+                            <option value="heart">HEART</option>
+                            <option value="kano">Kano Model</option>
+                            <option value="value-effort">Value vs Effort</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label><i class="fas fa-industry"></i> Industry</label>
+                        <select id="industry-filter" class="modern-select">
+                            <option value="all">All Industries</option>
+                            <option value="saas">SaaS</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="mobile">Mobile Apps</option>
+                            <option value="fintech">FinTech</option>
+                            <option value="healthtech">HealthTech</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label><i class="fas fa-users"></i> Company Size</label>
+                        <select id="size-filter" class="modern-select">
+                            <option value="all">All Sizes</option>
+                            <option value="startup">Startup (1-50)</option>
+                            <option value="scaleup">Scale-up (51-500)</option>
+                            <option value="enterprise">Enterprise (500+)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="case-studies-grid">
             <!-- Spotify RICE Case Study -->
-            <article class="case-study-card" data-framework="rice" data-industry="saas" data-size="enterprise">
+            <article class="case-study-card modern-card" data-framework="rice" data-industry="saas" data-size="enterprise">
+                <div class="card-overlay"></div>
                 <div class="case-study-header">
                     <div class="company-info">
-                        <div class="company-logo">
+                        <div class="company-logo spotify-logo">
                             <i class="fab fa-spotify"></i>
                         </div>
                         <div class="company-details">
                             <h3>Spotify</h3>
-                            <span class="industry-tag saas">SaaS</span>
-                            <span class="framework-tag rice">RICE Framework</span>
+                            <div class="tags-container">
+                                <span class="industry-tag saas">SaaS Platform</span>
+                                <span class="framework-tag rice">RICE Framework</span>
+                                <span class="size-tag enterprise">Enterprise</span>
+                            </div>
                         </div>
                     </div>
                     <div class="impact-score">
-                        <div class="score-value">9.2</div>
+                        <div class="score-circle">
+                            <div class="score-value">9.2</div>
+                        </div>
                         <div class="score-label">Impact Score</div>
                     </div>
                 </div>

@@ -425,29 +425,37 @@
             <div class="knowledge-grid">
                 <div class="knowledge-category">
                     <div class="knowledge-header">
-                        <i class="fas fa-graduation-cap"></i>
+                        <div class="knowledge-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
                         <h3>Core PM Skills</h3>
                     </div>
                     <div class="knowledge-content">
-                        <div class="skill-item">
-                            <h4>Strategic Thinking</h4>
-                            <p>Learn to think long-term and align product decisions with business goals</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 0%"></div>
+                        <div class="skill-item" onclick="toggleSkill(this)">
+                            <div class="skill-content">
+                                <div class="skill-title">Strategic Thinking</div>
+                                <div class="skill-description">Learn to think long-term and align product decisions with business goals</div>
+                            </div>
+                            <div class="skill-progress">
+                                <i class="fas fa-circle"></i>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <h4>User Research</h4>
-                            <p>Master techniques for understanding user needs and validating assumptions</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 0%"></div>
+                        <div class="skill-item" onclick="toggleSkill(this)">
+                            <div class="skill-content">
+                                <div class="skill-title">User Research</div>
+                                <div class="skill-description">Master techniques for understanding user needs and validating assumptions</div>
+                            </div>
+                            <div class="skill-progress">
+                                <i class="fas fa-circle"></i>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <h4>Data Analysis</h4>
-                            <p>Develop skills in metrics, analytics, and data-driven decision making</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 0%"></div>
+                        <div class="skill-item" onclick="toggleSkill(this)">
+                            <div class="skill-content">
+                                <div class="skill-title">Data Analysis</div>
+                                <div class="skill-description">Develop skills in metrics, analytics, and data-driven decision making</div>
+                            </div>
+                            <div class="skill-progress">
+                                <i class="fas fa-circle"></i>
                             </div>
                         </div>
                     </div>
@@ -455,52 +463,68 @@
                 
                 <div class="knowledge-category">
                     <div class="knowledge-header">
-                        <i class="fas fa-tools"></i>
+                        <div class="knowledge-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
                         <h3>PM Tools & Techniques</h3>
                     </div>
                     <div class="knowledge-content">
-                        <div class="tool-item">
-                            <h4>Wireframing</h4>
-                            <p>Create effective wireframes and mockups</p>
-                            <a href="#" class="knowledge-link">Learn More</a>
+                        <div class="skill-item" onclick="toggleSkill(this)">
+                            <div class="skill-content">
+                                <div class="skill-title">Wireframing</div>
+                                <div class="skill-description">Create effective wireframes and mockups</div>
+                            </div>
+                            <div class="skill-progress">
+                                <i class="fas fa-circle"></i>
+                            </div>
                         </div>
-                        <div class="tool-item">
-                            <h4>A/B Testing</h4>
-                            <p>Design and analyze experiments</p>
-                            <a href="#" class="knowledge-link">Learn More</a>
+                        <div class="skill-item" onclick="toggleSkill(this)">
+                            <div class="skill-content">
+                                <div class="skill-title">A/B Testing</div>
+                                <div class="skill-description">Design and analyze experiments</div>
+                            </div>
+                            <div class="skill-progress">
+                                <i class="fas fa-circle"></i>
+                            </div>
                         </div>
-                        <div class="tool-item">
-                            <h4>Stakeholder Management</h4>
-                            <p>Align diverse stakeholders and manage expectations</p>
-                            <a href="#" class="knowledge-link">Learn More</a>
+                        <div class="skill-item" onclick="toggleSkill(this)">
+                            <div class="skill-content">
+                                <div class="skill-title">Stakeholder Management</div>
+                                <div class="skill-description">Align diverse stakeholders and manage expectations</div>
+                            </div>
+                            <div class="skill-progress">
+                                <i class="fas fa-circle"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="knowledge-category">
                     <div class="knowledge-header">
-                        <i class="fas fa-brain"></i>
+                        <div class="knowledge-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
                         <h3>Decision Making</h3>
                     </div>
                     <div class="knowledge-content">
-                        <div class="decision-framework">
-                            <h4>The PM Decision Tree</h4>
-                            <div class="decision-tree">
-                                <div class="decision-node">
-                                    <div class="node-question">Does this align with our strategy?</div>
-                                    <div class="node-branches">
-                                        <div class="branch yes">Yes → Continue</div>
-                                        <div class="branch no">No → Reassess</div>
-                                    </div>
-                                </div>
-                                <div class="decision-node">
-                                    <div class="node-question">Do we have user validation?</div>
-                                    <div class="node-branches">
-                                        <div class="branch yes">Yes → Prioritize</div>
-                                        <div class="branch no">No → Research</div>
-                                    </div>
-                                </div>
+                        <h4 style="margin-bottom: 1rem; color: var(--primary-color);">The PM Decision Tree</h4>
+                        <div class="decision-tree">
+                            <div class="tree-question">Does this align with our strategy?</div>
+                            <div class="tree-options">
+                                <div class="tree-option yes" onclick="showResult(this, 'continue')">Yes →</div>
+                                <div class="tree-option no" onclick="showResult(this, 'reassess')">No →</div>
                             </div>
+                            <div class="tree-result continue">Continue to next decision point</div>
+                            <div class="tree-result reassess">Reassess strategy alignment</div>
+                        </div>
+                        <div class="decision-tree">
+                            <div class="tree-question">Do we have user validation?</div>
+                            <div class="tree-options">
+                                <div class="tree-option yes" onclick="showResult(this, 'continue')">Yes →</div>
+                                <div class="tree-option no" onclick="showResult(this, 'reassess')">No →</div>
+                            </div>
+                            <div class="tree-result continue">Prioritize this feature</div>
+                            <div class="tree-result reassess">Research user needs first</div>
                         </div>
                     </div>
                 </div>

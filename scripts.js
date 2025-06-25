@@ -20,25 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // PM Knowledge interactive progress bars
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach((item, index) => {
-        const progressBar = item.querySelector('.progress-fill');
-        if (progressBar) {
-            // Simulate progress based on user interaction
-            item.addEventListener('click', function() {
-                const currentWidth = parseInt(progressBar.style.width) || 0;
-                const newWidth = Math.min(currentWidth + 20, 100);
-                progressBar.style.width = newWidth + '%';
-                
-                // Add completion effect
-                if (newWidth === 100) {
-                    item.style.background = '#d4edda';
-                    item.style.borderLeftColor = '#28a745';
-                }
-            });
-        }
-    });
+    // PM Knowledge interactive skill items
+    initializeSkillTracking();
+    
+    // Decision tree functionality
+    initializeDecisionTrees();
     
     // Learning path step interaction
     const steps = document.querySelectorAll('.step');
@@ -874,3 +860,85 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// PM Knowledge Hub Functions
+function initializeSkillTracking() {
+    // Initialize skill tracking for PM Knowledge Hub
+    const skillProgress = JSON.parse(localStorage.getItem('skillProgress') || '{}');
+    
+    // Update visual state based on saved progress
+    document.querySelectorAll('.skill-item').forEach(item => {
+        const skillTitle = item.querySelector('.skill-title')?.textContent;
+        if (skillTitle && skillProgress[skillTitle]) {
+            item.classList.add('completed');
+            const progressIcon = item.querySelector('.skill-progress i');
+            if (progressIcon) {
+                progressIcon.className = 'fas fa-check';
+            }
+        }
+    });
+}
+
+function toggleSkill(skillItem) {
+    const skillTitle = skillItem.querySelector('.skill-title')?.textContent;
+    const progressIcon = skillItem.querySelector('.skill-progress i');
+    
+    if (skillItem.classList.contains('completed')) {
+        // Mark as incomplete
+        skillItem.classList.remove('completed');
+        if (progressIcon) {
+            progressIcon.className = 'fas fa-circle';
+        }
+        
+        // Remove from localStorage
+        const skillProgress = JSON.parse(localStorage.getItem('skillProgress') || '{}');
+        delete skillProgress[skillTitle];
+        localStorage.setItem('skillProgress', JSON.stringify(skillProgress));
+    } else {
+        // Mark as complete
+        skillItem.classList.add('completed');
+        if (progressIcon) {
+            progressIcon.className = 'fas fa-check';
+        }
+        
+        // Save to localStorage
+        const skillProgress = JSON.parse(localStorage.getItem('skillProgress') || '{}');
+        skillProgress[skillTitle] = true;
+        localStorage.setItem('skillProgress', JSON.stringify(skillProgress));
+    }
+}
+
+function initializeDecisionTrees() {
+    // Reset all decision tree results
+    document.querySelectorAll('.tree-result').forEach(result => {
+        result.style.display = 'none';
+    });
+}
+
+function showResult(optionElement, resultType) {
+    const decisionTree = optionElement.closest('.decision-tree');
+    const allResults = decisionTree.querySelectorAll('.tree-result');
+    const targetResult = decisionTree.querySelector(`.tree-result.${resultType}`);
+    
+    // Hide all results in this tree
+    allResults.forEach(result => {
+        result.style.display = 'none';
+    });
+    
+    // Show the selected result
+    if (targetResult) {
+        targetResult.style.display = 'block';
+    }
+    
+    // Visual feedback on the selected option
+    const allOptions = decisionTree.querySelectorAll('.tree-option');
+    allOptions.forEach(option => {
+        option.style.transform = 'translateY(0)';
+        option.style.boxShadow = 'none';
+    });
+    
+    optionElement.style.transform = 'translateY(-2px)';
+    optionElement.style.boxShadow = resultType === 'continue' ? 
+        '0 4px 12px rgba(26, 188, 156, 0.3)' : 
+        '0 4px 12px rgba(231, 76, 60, 0.3)';
+}

@@ -1,5 +1,116 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Development Workflow & Best Practices
+
+## Development Environment Setup
+
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Text editor or IDE (VS Code recommended)
+- Python 3.8+ (for Flask server)
+- Node.js 16+ (for Node.js server, optional)
+- Git for version control
+
+### Local Development
+1. Clone repository and navigate to project directory
+2. Choose development server:
+   - Direct file access: Open [index.html](mdc:index.html) in browser
+   - Python Flask: `python server.py` (requires `pip install -r requirements.txt`)
+   - Node.js: `node server.js`
+3. Access application at respective localhost URLs
+
+## Coding Standards & Conventions
+
+### HTML Structure
+- **Semantic HTML5**: Use appropriate semantic elements
+- **Accessibility**: Include ARIA labels and proper heading hierarchy
+- **i18n Support**: Add `data-i18n` attributes for translatable content
+- **PWA Meta Tags**: Include manifest and theme-color meta tags
+
+### CSS Guidelines
+- **Mobile-First**: Start with mobile styles, add desktop enhancements
+- **CSS Grid/Flexbox**: Use modern layout techniques
+- **CSS Variables**: Define consistent color schemes and spacing
+- **Responsive Units**: Use rem/em for scalable dimensions
+- **Class Naming**: Use descriptive, component-based class names
+
+### JavaScript Best Practices
+- **ES6+ Features**: Use modern JavaScript syntax
+- **Vanilla JS**: No external dependencies beyond Chart.js
+- **Modular Code**: Organize code into logical functions/classes
+- **Error Handling**: Include try-catch blocks for async operations
+- **Performance**: Optimize DOM manipulation and event listeners
+
+## File Organization Standards
+
+### Directory Structure
+```
+project-root/
+├── index.html                 # Main entry point
+├── styles.css                 # Global styles
+├── scripts.js                 # Core JavaScript
+├── frameworks/                # Framework category pages
+├── i18n/                      # Internationalization files
+├── manifest.json              # PWA manifest
+├── service-worker.js          # PWA service worker
+├── pwa.js                     # PWA functionality
+└── server files               # Backend options
+```
+
+### Framework Pages
+- Keep framework pages in [frameworks/](mdc:frameworks) directory
+- Use consistent naming: `Product-[Category].html`
+- Include category-specific styling and functionality
+- Maintain consistent page structure across all framework pages
+
+## Version Control Workflow
+
+### Git Best Practices
+- **Branching**: Use feature branches for new functionality
+- **Commit Messages**: Clear, descriptive commit messages
+- **Pull Requests**: Review changes before merging to main
+- **Documentation**: Update README and documentation with changes
+
+### Deployment Pipeline
+- **GitHub Pages**: Automatic deployment from main branch
+- **Testing**: Test changes locally before pushing
+- **Validation**: Validate HTML, CSS, and JavaScript
+- **PWA Testing**: Test service worker and manifest functionality
+
+## Code Quality Assurance
+
+### Testing Checklist
+- [ ] **Responsive Design**: Test on multiple screen sizes
+- [ ] **Cross-Browser**: Verify compatibility across browsers
+- [ ] **i18n Functionality**: Test all supported languages
+- [ ] **PWA Features**: Test installation and offline functionality
+- [ ] **Chart Rendering**: Verify all Chart.js visualizations work
+- [ ] **Navigation**: Test all internal and external links
+- [ ] **Performance**: Check page load times and optimization
+
+### Code Review Standards
+- **Functionality**: Code works as intended
+- **Performance**: No unnecessary performance bottlenecks
+- **Accessibility**: Meets WCAG guidelines
+- **i18n Compliance**: All user-facing text is translatable
+- **Documentation**: Code is well-commented and self-documenting
+
+## Feature Development Guidelines
+
+### Adding New Features
+1. **Planning**: Document feature requirements and design
+2. **i18n Consideration**: Plan for multilingual support from start
+3. **Responsive Design**: Ensure mobile-first approach
+4. **Chart Integration**: Use Chart.js for data visualizations
+5. **Testing**: Test across browsers and devices
+6. **Documentation**: Update relevant documentation and rules
+
+### Maintenance Tasks
+- **Content Updates**: Regular review of framework information
+- **Dependency Updates**: Monitor and update Chart.js and other libraries
+- **Performance Optimization**: Regular performance audits
+- **Accessibility Improvements**: Ongoing accessibility enhancements
+- **i18n Expansion**: Add support for additional languages as needed

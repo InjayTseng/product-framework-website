@@ -1,5 +1,43 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Product Framework Website - Project Overview
+
+## Project Description
+This is a comprehensive multilingual web application that provides product management frameworks and methodologies. The website serves as an educational resource for product managers, developers, and stakeholders to make better product decisions.
+
+## Key Features
+- 📚 15+ product management frameworks across 6 categories
+- 🌐 Multilingual support (English, Traditional Chinese, Simplified Chinese)
+- 📊 Interactive charts and visualizations using Chart.js
+- 💡 Practical examples and implementation guides
+- 🔍 Framework comparison tools
+- 📱 Progressive Web App (PWA) capabilities
+- 🎨 Responsive design with modern UI/UX
+
+## Tech Stack
+- **Frontend**: Vanilla HTML5, CSS3, JavaScript (ES6+)
+- **Charts**: Chart.js for data visualization
+- **Icons**: Font Awesome 6.5.1
+- **Internationalization**: Custom i18n system with JSON translations
+- **PWA**: Service Worker, Web App Manifest
+- **Backend Options**: Flask (Python) or Node.js server
+- **Deployment**: GitHub Pages compatible
+
+## Project Structure
+- Main entry point: [index.html](mdc:index.html)
+- Framework pages: [frameworks/](mdc:frameworks) directory
+- Styling: [styles.css](mdc:styles.css)
+- Main JavaScript: [scripts.js](mdc:scripts.js)
+- Internationalization: [i18n/](mdc:i18n) directory
+- PWA configuration: [manifest.json](mdc:manifest.json), [pwa.js](mdc:pwa.js), [service-worker.js](mdc:service-worker.js)
+
+## Framework Categories
+1. **Priority Frameworks** - RICE, MoSCoW, Value vs Effort, ICE, Kano Model
+2. **Discovery Frameworks** - Jobs To Be Done, Design Thinking, Lean Canvas
+3. **Strategy Frameworks** - Product Vision Board, Business Model Canvas, OKRs
+4. **Metrics Frameworks** - HEART, Pirate Metrics (AARRR), North Star
+5. **Development Frameworks** - Agile, Scrum, Lean Development, Shape Up
+6. **Growth Frameworks** - Growth Loop, Hook Model, Product-Led Growth

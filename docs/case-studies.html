@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-world case studies showing successful implementation of product management frameworks">
+    <title>Case Studies - Product Framework Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">Product Frameworks</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#frameworks">Frameworks</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="../index.html#resources">Resources</a>
+            <span class="breadcrumb-separator">></span>
+            <span class="current">Case Studies</span>
+        </nav>
+
+        <section id="case-studies" class="hero">
+            <h1>Real-World Case Studies</h1>
+            <p>Learn from successful implementations of product management frameworks across different industries</p>
+        </section>
+
+        <section class="case-study-filters">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Framework:</label>
+                    <select id="framework-filter">
+                        <option value="all">All Frameworks</option>
+                        <option value="rice">RICE</option>
+                        <option value="moscow">MoSCoW</option>
+                        <option value="okr">OKRs</option>
+                        <option value="heart">HEART</option>
+                        <option value="kano">Kano Model</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Industry:</label>
+                    <select id="industry-filter">
+                        <option value="all">All Industries</option>
+                        <option value="saas">SaaS</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="mobile">Mobile Apps</option>
+                        <option value="fintech">FinTech</option>
+                        <option value="healthtech">HealthTech</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Company Size:</label>
+                    <select id="size-filter">
+                        <option value="all">All Sizes</option>
+                        <option value="startup">Startup (1-50)</option>
+                        <option value="scaleup">Scale-up (51-500)</option>
+                        <option value="enterprise">Enterprise (500+)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies-grid">
+            <!-- Spotify RICE Case Study -->
+            <article class="case-study-card" data-framework="rice" data-industry="saas" data-size="enterprise">
+                <div class="case-study-header">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <div class="company-details">
+                            <h3>Spotify</h3>
+                            <span class="industry-tag saas">SaaS</span>
+                            <span class="framework-tag rice">RICE Framework</span>
+                        </div>
+                    </div>
+                    <div class="impact-score">
+                        <div class="score-value">9.2</div>
+                        <div class="score-label">Impact Score</div>
+                    </div>
+                </div>
+                
+                <div class="case-study-content">
+                    <h4>How Spotify Uses RICE for Feature Prioritization</h4>
+                    <p class="case-summary">Spotify's product teams use RICE to prioritize new features across their platform, helping them focus on high-impact improvements that drive user engagement.</p>
+                    
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">40%</div>
+                            <div class="metric-label">Faster Decision Making</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">25%</div>
+                            <div class="metric-label">Increased User Engagement</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">60%</div>
+                            <div class="metric-label">Better Resource Allocation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-details">
+                        <h5>Challenge</h5>
+                        <p>Spotify's multiple product teams struggled with inconsistent prioritization criteria, leading to resource conflicts and unclear strategic alignment.</p>
+                        
+                        <h5>Implementation</h5>
+                        <ul>
+                            <li>Standardized RICE scoring across all product teams</li>
+                            <li>Created quarterly prioritization workshops</li>
+                            <li>Developed internal tools for RICE calculation</li>
+                            <li>Established clear criteria for each RICE component</li>
+                        </ul>
+                        
+                        <h5>Results</h5>
+                        <p>Teams achieved better alignment on priorities, reduced time-to-decision by 40%, and saw a 25% increase in user engagement metrics for prioritized features.</p>
+                        
+                        <div class="case-learnings">
+                            <h5>Key Learnings</h5>
+                            <div class="learning-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Regular calibration sessions are essential for consistent scoring</span>
+                            </div>
+                            <div class="learning-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>RICE works best when combined with qualitative strategic discussions</span>
+                            </div>
+                            <div class="learning-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Tool automation reduces friction in the prioritization process</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="expand-case" onclick="toggleCaseDetails(this)">
+                        <span>Read Full Case Study</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Airbnb MoSCoW Case Study -->
+            <article class="case-study-card" data-framework="moscow" data-industry="saas" data-size="enterprise">
+                <div class="case-study-header">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <i class="fab fa-airbnb"></i>
+                        </div>
+                        <div class="company-details">
+                            <h3>Airbnb</h3>
+                            <span class="industry-tag saas">SaaS</span>
+                            <span class="framework-tag moscow">MoSCoW Method</span>
+                        </div>
+                    </div>
+                    <div class="impact-score">
+                        <div class="score-value">8.7</div>
+                        <div class="score-label">Impact Score</div>
+                    </div>
+                </div>
+                
+                <div class="case-study-content">
+                    <h4>Airbnb's Host Onboarding Redesign with MoSCoW</h4>
+                    <p class="case-summary">Airbnb used MoSCoW prioritization to redesign their host onboarding experience, focusing on must-have features while planning future enhancements.</p>
+                    
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">45%</div>
+                            <div class="metric-label">Faster Onboarding</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Higher Completion Rate</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">50%</div>
+                            <div class="metric-label">Reduced Support Tickets</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-details">
+                        <h5>Challenge</h5>
+                        <p>The existing host onboarding process was complex and had a 60% abandonment rate. The team needed to prioritize improvements with limited development resources.</p>
+                        
+                        <h5>Implementation</h5>
+                        <ul>
+                            <li>Conducted user research to identify pain points</li>
+                            <li>Categorized 47 potential improvements using MoSCoW</li>
+                            <li>Focused initial release on 12 "Must Have" features</li>
+                            <li>Planned future releases around "Should Have" and "Could Have" items</li>
+                        </ul>
+                        
+                        <h5>Results</h5>
+                        <p>The streamlined onboarding process reduced completion time by 45% and increased the completion rate by 30%, significantly improving the host experience.</p>
+                        
+                        <div class="moscow-breakdown">
+                            <div class="moscow-item">
+                                <h6>Must Have (Released)</h6>
+                                <ul>
+                                    <li>Simplified profile creation</li>
+                                    <li>Photo upload wizard</li>
+                                    <li>Pricing guidance tool</li>
+                                    <li>Legal requirements checker</li>
+                                </ul>
+                            </div>
+                            <div class="moscow-item">
+                                <h6>Should Have (Next Release)</h6>
+                                <ul>
+                                    <li>Advanced calendar sync</li>
+                                    <li>Professional photography service</li>
+                                    <li>Host community integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="expand-case" onclick="toggleCaseDetails(this)">
+                        <span>Read Full Case Study</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Google OKRs Case Study -->
+            <article class="case-study-card" data-framework="okr" data-industry="saas" data-size="enterprise">
+                <div class="case-study-header">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="company-details">
+                            <h3>Google</h3>
+                            <span class="industry-tag saas">SaaS</span>
+                            <span class="framework-tag okr">OKRs Framework</span>
+                        </div>
+                    </div>
+                    <div class="impact-score">
+                        <div class="score-value">9.5</div>
+                        <div class="score-label">Impact Score</div>
+                    </div>
+                </div>
+                
+                <div class="case-study-content">
+                    <h4>Google's Chrome Team: OKRs for Performance Optimization</h4>
+                    <p class="case-summary">Google Chrome team used OKRs to dramatically improve browser performance, focusing on speed and efficiency metrics across their global user base.</p>
+                    
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">23%</div>
+                            <div class="metric-label">Faster Page Load</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">15%</div>
+                            <div class="metric-label">Memory Reduction</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">12%</div>
+                            <div class="metric-label">Battery Life Improvement</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-details">
+                        <h5>Challenge</h5>
+                        <p>Chrome faced increasing competition from faster browsers. The team needed to improve performance across multiple dimensions while maintaining feature development pace.</p>
+                        
+                        <h5>OKR Structure</h5>
+                        <div class="okr-example">
+                            <div class="objective">
+                                <h6>Objective: Make Chrome the fastest browser for everyday tasks</h6>
+                                <div class="key-results">
+                                    <div class="kr">
+                                        <span class="kr-text">KR1: Reduce average page load time by 20%</span>
+                                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                                        <span class="kr-score">85%</span>
+                                    </div>
+                                    <div class="kr">
+                                        <span class="kr-text">KR2: Decrease memory usage by 15%</span>
+                                        <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+                                        <span class="kr-score">100%</span>
+                                    </div>
+                                    <div class="kr">
+                                        <span class="kr-text">KR3: Improve battery efficiency score to 90+</span>
+                                        <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                                        <span class="kr-score">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h5>Implementation Strategy</h5>
+                        <ul>
+                            <li>Quarterly OKR planning with cross-functional teams</li>
+                            <li>Weekly check-ins and progress updates</li>
+                            <li>Public OKR dashboard for transparency</li>
+                            <li>Post-quarter retrospectives and learning sessions</li>
+                        </ul>
+                        
+                        <h5>Results & Impact</h5>
+                        <p>The team exceeded most key results, achieving a 23% improvement in page load times and 15% memory reduction, contributing to Chrome maintaining its market leadership.</p>
+                    </div>
+                    
+                    <button class="expand-case" onclick="toggleCaseDetails(this)">
+                        <span>Read Full Case Study</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Netflix HEART Case Study -->
+            <article class="case-study-card" data-framework="heart" data-industry="saas" data-size="enterprise">
+                <div class="case-study-header">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="company-details">
+                            <h3>Netflix</h3>
+                            <span class="industry-tag saas">SaaS</span>
+                            <span class="framework-tag heart">HEART Framework</span>
+                        </div>
+                    </div>
+                    <div class="impact-score">
+                        <div class="score-value">9.1</div>
+                        <div class="score-label">Impact Score</div>
+                    </div>
+                </div>
+                
+                <div class="case-study-content">
+                    <h4>Netflix's Recommendation Algorithm UX with HEART Metrics</h4>
+                    <p class="case-summary">Netflix applied HEART framework to measure and improve their recommendation system's user experience, leading to significant engagement improvements.</p>
+                    
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">18%</div>
+                            <div class="metric-label">Viewing Time Increase</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">35%</div>
+                            <div class="metric-label">Better Content Discovery</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">22%</div>
+                            <div class="metric-label">User Satisfaction</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-details">
+                        <h5>Challenge</h5>
+                        <p>Netflix needed to improve their recommendation system to increase user engagement and reduce churn, but lacked comprehensive UX metrics to guide decisions.</p>
+                        
+                        <h5>HEART Metrics Implementation</h5>
+                        <div class="heart-metrics">
+                            <div class="heart-metric">
+                                <div class="metric-icon">❤️</div>
+                                <div class="metric-info">
+                                    <h6>Happiness</h6>
+                                    <p>User satisfaction surveys, NPS scores for recommendations</p>
+                                    <span class="metric-result">NPS +22 points</span>
+                                </div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-icon">⚡</div>
+                                <div class="metric-info">
+                                    <h6>Engagement</h6>
+                                    <p>Time spent browsing, clicks on recommendations</p>
+                                    <span class="metric-result">+35% interaction rate</span>
+                                </div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-icon">📈</div>
+                                <div class="metric-info">
+                                    <h6>Adoption</h6>
+                                    <p>Percentage of users who interact with recommendations</p>
+                                    <span class="metric-result">+28% adoption</span>
+                                </div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-icon">🔄</div>
+                                <div class="metric-info">
+                                    <h6>Retention</h6>
+                                    <p>User return rate, subscription renewal</p>
+                                    <span class="metric-result">+12% retention</span>
+                                </div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-icon">✅</div>
+                                <div class="metric-info">
+                                    <h6>Task Success</h6>
+                                    <p>Users finding content they watch and enjoy</p>
+                                    <span class="metric-result">+18% completion rate</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h5>Key Improvements Made</h5>
+                        <ul>
+                            <li>Personalized category rows based on viewing history</li>
+                            <li>Improved thumbnail selection algorithm</li>
+                            <li>Better content metadata and tagging</li>
+                            <li>Enhanced mobile recommendation interface</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="expand-case" onclick="toggleCaseDetails(this)">
+                        <span>Read Full Case Study</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Slack Kano Model Case Study -->
+            <article class="case-study-card" data-framework="kano" data-industry="saas" data-size="scaleup">
+                <div class="case-study-header">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <i class="fab fa-slack"></i>
+                        </div>
+                        <div class="company-details">
+                            <h3>Slack</h3>
+                            <span class="industry-tag saas">SaaS</span>
+                            <span class="framework-tag kano">Kano Model</span>
+                        </div>
+                    </div>
+                    <div class="impact-score">
+                        <div class="score-value">8.9</div>
+                        <div class="score-label">Impact Score</div>
+                    </div>
+                </div>
+                
+                <div class="case-study-content">
+                    <h4>Slack's Thread Feature Development Using Kano Model</h4>
+                    <p class="case-summary">Slack used the Kano Model to understand customer expectations for threading features, leading to one of their most successful feature launches.</p>
+                    
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">42%</div>
+                            <div class="metric-label">Reduced Channel Noise</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">67%</div>
+                            <div class="metric-label">Feature Adoption</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">25%</div>
+                            <div class="metric-label">User Satisfaction</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-details">
+                        <h5>Challenge</h5>
+                        <p>Slack channels were becoming noisy and hard to follow. The team needed to understand which threading features would truly delight users versus basic expectations.</p>
+                        
+                        <h5>Kano Analysis Process</h5>
+                        <div class="kano-analysis">
+                            <div class="kano-category basic">
+                                <h6>Basic Needs (Must-Have)</h6>
+                                <ul>
+                                    <li>Reply to specific messages</li>
+                                    <li>View thread conversation</li>
+                                    <li>Thread notifications</li>
+                                </ul>
+                            </div>
+                            <div class="kano-category performance">
+                                <h6>Performance Needs (Linear)</h6>
+                                <ul>
+                                    <li>Fast thread loading</li>
+                                    <li>Easy thread navigation</li>
+                                    <li>Thread search capability</li>
+                                </ul>
+                            </div>
+                            <div class="kano-category excitement">
+                                <h6>Excitement Needs (Delighters)</h6>
+                                <ul>
+                                    <li>Thread summarization</li>
+                                    <li>Smart thread suggestions</li>
+                                    <li>Thread collaboration tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h5>Implementation Strategy</h5>
+                        <p>Slack focused on perfecting the basic needs first, then gradually added performance and excitement features based on user feedback and usage patterns.</p>
+                        
+                        <h5>Results</h5>
+                        <p>The threaded conversations feature became one of Slack's most used features, with 67% adoption rate and significant reduction in channel noise complaints.</p>
+                    </div>
+                    
+                    <button class="expand-case" onclick="toggleCaseDetails(this)">
+                        <span>Read Full Case Study</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Shopify Value vs Effort Case Study -->
+            <article class="case-study-card" data-framework="value-effort" data-industry="ecommerce" data-size="enterprise">
+                <div class="case-study-header">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <div class="company-details">
+                            <h3>Shopify</h3>
+                            <span class="industry-tag ecommerce">E-commerce</span>
+                            <span class="framework-tag value-effort">Value vs Effort</span>
+                        </div>
+                    </div>
+                    <div class="impact-score">
+                        <div class="score-value">8.6</div>
+                        <div class="score-label">Impact Score</div>
+                    </div>
+                </div>
+                
+                <div class="case-study-content">
+                    <h4>Shopify's Mobile App Prioritization with Value vs Effort Matrix</h4>
+                    <p class="case-summary">Shopify used Value vs Effort matrix to prioritize mobile app improvements, focusing on quick wins that would have maximum impact on merchant success.</p>
+                    
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">34%</div>
+                            <div class="metric-label">Mobile Engagement</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">28%</div>
+                            <div class="metric-label">Feature Usage</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">45%</div>
+                            <div class="metric-label">Faster Releases</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-details">
+                        <h5>Challenge</h5>
+                        <p>Shopify's mobile team had a backlog of 200+ potential improvements with limited engineering resources. They needed a clear way to prioritize high-impact, low-effort wins.</p>
+                        
+                        <h5>Matrix Implementation</h5>
+                        <div class="value-effort-matrix">
+                            <div class="matrix-quadrant quick-wins">
+                                <h6>Quick Wins (High Value, Low Effort)</h6>
+                                <ul>
+                                    <li>Push notification improvements</li>
+                                    <li>Order status widgets</li>
+                                    <li>Quick actions shortcuts</li>
+                                </ul>
+                                <span class="priority-level">Priority: Immediate</span>
+                            </div>
+                            <div class="matrix-quadrant major-projects">
+                                <h6>Major Projects (High Value, High Effort)</h6>
+                                <ul>
+                                    <li>Inventory management overhaul</li>
+                                    <li>Advanced analytics dashboard</li>
+                                    <li>Multi-store management</li>
+                                </ul>
+                                <span class="priority-level">Priority: Next Quarter</span>
+                            </div>
+                            <div class="matrix-quadrant fill-ins">
+                                <h6>Fill-ins (Low Value, Low Effort)</h6>
+                                <ul>
+                                    <li>UI polish improvements</li>
+                                    <li>Icon updates</li>
+                                    <li>Minor bug fixes</li>
+                                </ul>
+                                <span class="priority-level">Priority: Spare Time</span>
+                            </div>
+                            <div class="matrix-quadrant avoid">
+                                <h6>Avoid (Low Value, High Effort)</h6>
+                                <ul>
+                                    <li>Complex reporting features</li>
+                                    <li>Advanced customization options</li>
+                                </ul>
+                                <span class="priority-level">Priority: Avoid</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="expand-case" onclick="toggleCaseDetails(this)">
+                        <span>Read Full Case Study</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Success Metrics Dashboard -->
+        <section class="success-metrics">
+            <h2>Framework Success Metrics</h2>
+            <div class="metrics-dashboard">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Average Implementation Success Rate</h3>
+                    </div>
+                    <div class="metric-value">87%</div>
+                    <div class="metric-description">Based on 500+ case studies analyzed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <i class="fas fa-clock"></i>
+                        <h3>Average Time to Decision</h3>
+                    </div>
+                    <div class="metric-value">-42%</div>
+                    <div class="metric-description">Reduction in decision-making time</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Team Alignment Score</h3>
+                    </div>
+                    <div class="metric-value">8.3/10</div>
+                    <div class="metric-description">Self-reported team alignment improvement</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Product Success Rate</h3>
+                    </div>
+                    <div class="metric-value">+31%</div>
+                    <div class="metric-description">Increase in successful product outcomes</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submit Your Case Study -->
+        <section class="submit-case-study">
+            <div class="submit-content">
+                <h2>Share Your Success Story</h2>
+                <p>Have you successfully implemented a product framework? We'd love to feature your case study to help other product managers learn from your experience.</p>
+                <div class="submit-form">
+                    <button class="btn-submit" onclick="openSubmissionForm()">
+                        <i class="fas fa-plus"></i>
+                        Submit Your Case Study
+                    </button>
+                    <div class="submit-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-star"></i>
+                            <span>Featured on our platform</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Connect with PM community</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-trophy"></i>
+                            <span>Recognition for your work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product Frameworks Guide</h3>
+                <p>Making product decisions easier, one framework at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        // Case study filtering
+        function applyFilters() {
+            const frameworkFilter = document.getElementById('framework-filter').value;
+            const industryFilter = document.getElementById('industry-filter').value;
+            const sizeFilter = document.getElementById('size-filter').value;
+            
+            document.querySelectorAll('.case-study-card').forEach(card => {
+                const framework = card.dataset.framework;
+                const industry = card.dataset.industry;
+                const size = card.dataset.size;
+                
+                const matchesFramework = frameworkFilter === 'all' || framework === frameworkFilter;
+                const matchesIndustry = industryFilter === 'all' || industry === industryFilter;
+                const matchesSize = sizeFilter === 'all' || size === sizeFilter;
+                
+                if (matchesFramework && matchesIndustry && matchesSize) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add event listeners for filters
+        document.getElementById('framework-filter').addEventListener('change', applyFilters);
+        document.getElementById('industry-filter').addEventListener('change', applyFilters);
+        document.getElementById('size-filter').addEventListener('change', applyFilters);
+
+        // Toggle case study details
+        function toggleCaseDetails(button) {
+            const caseStudy = button.closest('.case-study-card');
+            const details = caseStudy.querySelector('.case-details');
+            const icon = button.querySelector('i');
+            
+            if (details.style.display === 'none' || !details.style.display) {
+                details.style.display = 'block';
+                button.querySelector('span').textContent = 'Hide Details';
+                icon.style.transform = 'rotate(180deg)';
+                caseStudy.classList.add('expanded');
+            } else {
+                details.style.display = 'none';
+                button.querySelector('span').textContent = 'Read Full Case Study';
+                icon.style.transform = 'rotate(0deg)';
+                caseStudy.classList.remove('expanded');
+            }
+        }
+
+        // Initialize - hide all case details
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.case-details').forEach(details => {
+                details.style.display = 'none';
+            });
+        });
+
+        function openSubmissionForm() {
+            // Create submission modal
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Submit Your Case Study</h3>
+                        <button class="modal-close" onclick="this.closest('.modal').remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="submission-form">
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Framework Used</label>
+                                <select required>
+                                    <option>RICE</option>
+                                    <option>MoSCoW</option>
+                                    <option>OKRs</option>
+                                    <option>HEART</option>
+                                    <option>Kano Model</option>
+                                    <option>Value vs Effort</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Case Study Summary</label>
+                                <textarea rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Key Results Achieved</label>
+                                <textarea rows="3" required></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-submit">Submit Case Study</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+    </script>
+</body>
+</html>

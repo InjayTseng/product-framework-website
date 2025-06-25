@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best practices and expert tips for implementing product management frameworks effectively">
+    <title>Best Practices - Product Framework Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">Product Frameworks</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#frameworks">Frameworks</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="#best-practices">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="../index.html#resources">Resources</a>
+            <span class="breadcrumb-separator">></span>
+            <span class="current">Best Practices</span>
+        </nav>
+
+        <section id="best-practices" class="hero">
+            <h1>Best Practices Guide</h1>
+            <p>Expert tips and proven strategies for implementing product management frameworks successfully</p>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="practices-navigation">
+            <div class="nav-grid">
+                <a href="#general-principles" class="nav-card">
+                    <i class="fas fa-compass"></i>
+                    <h3>General Principles</h3>
+                    <p>Universal best practices for any framework</p>
+                </a>
+                <a href="#implementation-guide" class="nav-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Implementation</h3>
+                    <p>Step-by-step implementation strategies</p>
+                </a>
+                <a href="#common-pitfalls" class="nav-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Common Pitfalls</h3>
+                    <p>Mistakes to avoid and how to prevent them</p>
+                </a>
+                <a href="#team-collaboration" class="nav-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Collaboration</h3>
+                    <p>Building consensus and alignment</p>
+                </a>
+                <a href="#framework-specific" class="nav-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Framework-Specific</h3>
+                    <p>Detailed tips for each framework</p>
+                </a>
+                <a href="#measurement" class="nav-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Measurement</h3>
+                    <p>Tracking success and iterating</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- General Principles -->
+        <section id="general-principles" class="practices-section">
+            <div class="section-header">
+                <h2>General Principles</h2>
+                <p>These principles apply to any product management framework implementation</p>
+            </div>
+            
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Start Simple, Iterate Often</h3>
+                        <p>Begin with a basic implementation of your chosen framework. Don't try to perfect it immediately—instead, use it for a few cycles and refine based on what you learn.</p>
+                        <div class="practical-tip">
+                            <strong>Practical Tip:</strong> For RICE scoring, start with rough estimates (orders of magnitude) before investing time in precise calculations.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Build Team Buy-in Early</h3>
+                        <p>Framework success depends on team adoption. Involve stakeholders in the selection process and ensure everyone understands the "why" behind the chosen approach.</p>
+                        <div class="practical-tip">
+                            <strong>Practical Tip:</strong> Run a pilot workshop with key stakeholders to demonstrate the framework's value before full rollout.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Maintain Consistency</h3>
+                        <p>Use the same criteria and scoring methods across teams and time periods. Inconsistency undermines the framework's effectiveness and comparability.</p>
+                        <div class="practical-tip">
+                            <strong>Practical Tip:</strong> Create scoring guidelines with examples and run regular calibration sessions with your team.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Context Over Rigid Rules</h3>
+                        <p>Frameworks provide structure, not rigid rules. Be prepared to adapt based on your specific context, constraints, and organizational culture.</p>
+                        <div class="practical-tip">
+                            <strong>Practical Tip:</strong> If RICE confidence scores are consistently low, consider whether you need more research or if the framework needs adjustment.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Document Decisions</h3>
+                        <p>Keep records of scoring rationale, assumptions made, and outcomes achieved. This creates institutional knowledge and helps refine future decisions.</p>
+                        <div class="practical-tip">
+                            <strong>Practical Tip:</strong> Use a simple template to capture key assumptions and reasoning behind each prioritization decision.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Measure and Learn</h3>
+                        <p>Track the outcomes of your framework-driven decisions. Use this data to validate your approach and identify areas for improvement.</p>
+                        <div class="practical-tip">
+                            <strong>Practical Tip:</strong> Set up a quarterly review to assess whether high-priority items actually delivered expected results.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Guide -->
+        <section id="implementation-guide" class="practices-section">
+            <h2>Implementation Strategy</h2>
+            
+            <div class="implementation-timeline">
+                <div class="timeline-phase">
+                    <div class="phase-number">1</div>
+                    <div class="phase-content">
+                        <h3>Preparation Phase (Week 1-2)</h3>
+                        <div class="phase-checklist">
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Assess current prioritization process</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Select appropriate framework based on team needs</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Identify key stakeholders and champions</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Set success metrics for framework adoption</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">2</div>
+                    <div class="phase-content">
+                        <h3>Pilot Phase (Week 3-6)</h3>
+                        <div class="phase-checklist">
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Train core team on framework methodology</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Run pilot with 10-20 features/initiatives</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Establish scoring guidelines and examples</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Gather feedback and identify pain points</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">3</div>
+                    <div class="phase-content">
+                        <h3>Refinement Phase (Week 7-10)</h3>
+                        <div class="phase-checklist">
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Adjust framework based on pilot learnings</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Create tools and templates for team use</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Develop training materials and documentation</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Plan broader team rollout strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">4</div>
+                    <div class="phase-content">
+                        <h3>Rollout Phase (Week 11-14)</h3>
+                        <div class="phase-checklist">
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Train broader team and stakeholders</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Implement framework in regular planning cycles</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Establish regular calibration sessions</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Set up measurement and tracking systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">5</div>
+                    <div class="phase-content">
+                        <h3>Optimization Phase (Ongoing)</h3>
+                        <div class="phase-checklist">
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Monitor framework usage and effectiveness</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Conduct quarterly retrospectives</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Refine criteria and processes based on outcomes</span>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-check"></i>
+                                <span>Share learnings and best practices across teams</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Pitfalls -->
+        <section id="common-pitfalls" class="practices-section">
+            <h2>Common Pitfalls to Avoid</h2>
+            
+            <div class="pitfalls-grid">
+                <div class="pitfall-card">
+                    <div class="pitfall-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Over-Engineering the Process</h3>
+                    </div>
+                    <div class="pitfall-content">
+                        <div class="problem">
+                            <h4>The Problem:</h4>
+                            <p>Creating overly complex scoring systems with too many criteria, subcategories, and decimal precision.</p>
+                        </div>
+                        <div class="solution">
+                            <h4>The Solution:</h4>
+                            <p>Start with simple 1-5 scales and basic criteria. Remember: being roughly right is better than being precisely wrong.</p>
+                        </div>
+                        <div class="warning-signs">
+                            <h4>Warning Signs:</h4>
+                            <ul>
+                                <li>Scoring sessions take more than 2 hours</li>
+                                <li>Team debates decimal point precision</li>
+                                <li>New team members need extensive training</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pitfall-card">
+                    <div class="pitfall-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Treating Frameworks as Gospel</h3>
+                    </div>
+                    <div class="pitfall-content">
+                        <div class="problem">
+                            <h4>The Problem:</h4>
+                            <p>Following framework outputs blindly without considering context, strategic importance, or qualitative factors.</p>
+                        </div>
+                        <div class="solution">
+                            <h4>The Solution:</h4>
+                            <p>Use frameworks to inform decisions, not make them. Always apply human judgment and consider strategic context.</p>
+                        </div>
+                        <div class="example">
+                            <h4>Example:</h4>
+                            <p>A security fix might score low on RICE but be essential for compliance—strategic context overrides the score.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pitfall-card">
+                    <div class="pitfall-header">
+                        <i class="fas fa-users-slash"></i>
+                        <h3>Lack of Stakeholder Alignment</h3>
+                    </div>
+                    <div class="pitfall-content">
+                        <div class="problem">
+                            <h4>The Problem:</h4>
+                            <p>Implementing frameworks without proper buy-in from leadership, engineering, or other key stakeholders.</p>
+                        </div>
+                        <div class="solution">
+                            <h4>The Solution:</h4>
+                            <p>Involve stakeholders in framework selection and scoring. Make the process transparent and collaborative.</p>
+                        </div>
+                        <div class="action-items">
+                            <h4>Action Items:</h4>
+                            <ul>
+                                <li>Run joint scoring sessions</li>
+                                <li>Share framework rationale</li>
+                                <li>Address concerns openly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pitfall-card">
+                    <div class="pitfall-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Gaming the System</h3>
+                    </div>
+                    <div class="pitfall-content">
+                        <div class="problem">
+                            <h4>The Problem:</h4>
+                            <p>Teams inflating scores to get their features prioritized, undermining the framework's integrity.</p>
+                        </div>
+                        <div class="solution">
+                            <h4>The Solution:</h4>
+                            <p>Establish clear scoring guidelines, use calibration sessions, and focus on relative rather than absolute scores.</p>
+                        </div>
+                        <div class="prevention">
+                            <h4>Prevention Strategies:</h4>
+                            <ul>
+                                <li>Cross-team scoring validation</li>
+                                <li>Historical outcome tracking</li>
+                                <li>Regular score calibration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pitfall-card">
+                    <div class="pitfall-header">
+                        <i class="fas fa-clock"></i>
+                        <h3>Analysis Paralysis</h3>
+                    </div>
+                    <div class="pitfall-content">
+                        <div class="problem">
+                            <h4>The Problem:</h4>
+                            <p>Spending too much time researching and scoring instead of making decisions and shipping features.</p>
+                        </div>
+                        <div class="solution">
+                            <h4>The Solution:</h4>
+                            <p>Set time limits for scoring sessions and accept that some uncertainty is normal and healthy.</p>
+                        </div>
+                        <div class="time-limits">
+                            <h4>Suggested Time Limits:</h4>
+                            <ul>
+                                <li>Individual feature scoring: 15 minutes</li>
+                                <li>Team scoring session: 90 minutes max</li>
+                                <li>Research for scoring: 1-2 hours</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pitfall-card">
+                    <div class="pitfall-header">
+                        <i class="fas fa-archive"></i>
+                        <h3>Set-and-Forget Mentality</h3>
+                    </div>
+                    <div class="pitfall-content">
+                        <div class="problem">
+                            <h4>The Problem:</h4>
+                            <p>Implementing a framework once and never revisiting or improving it based on outcomes and learnings.</p>
+                        </div>
+                        <div class="solution">
+                            <h4>The Solution:</h4>
+                            <p>Schedule regular retrospectives to assess framework effectiveness and make adjustments.</p>
+                        </div>
+                        <div class="review-schedule">
+                            <h4>Review Schedule:</h4>
+                            <ul>
+                                <li>Monthly: Quick process check</li>
+                                <li>Quarterly: Outcome assessment</li>
+                                <li>Annually: Framework evaluation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Collaboration -->
+        <section id="team-collaboration" class="practices-section">
+            <h2>Building Team Collaboration</h2>
+            
+            <div class="collaboration-strategies">
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Running Effective Scoring Sessions</h3>
+                    </div>
+                    <div class="strategy-content">
+                        <div class="best-practices-list">
+                            <h4>Before the Session:</h4>
+                            <ul>
+                                <li>Share feature descriptions and context 24 hours in advance</li>
+                                <li>Prepare examples and reference points for scoring</li>
+                                <li>Define clear success criteria for the session</li>
+                                <li>Choose a neutral facilitator (ideally not the feature owner)</li>
+                            </ul>
+                            
+                            <h4>During the Session:</h4>
+                            <ul>
+                                <li>Start with a brief framework reminder and examples</li>
+                                <li>Use silent individual scoring before group discussion</li>
+                                <li>Focus on identifying large discrepancies rather than perfect consensus</li>
+                                <li>Timebox discussions (5 minutes per criterion max)</li>
+                                <li>Document assumptions and reasoning</li>
+                            </ul>
+                            
+                            <h4>After the Session:</h4>
+                            <ul>
+                                <li>Share final scores and rationale with all stakeholders</li>
+                                <li>Schedule follow-up for any unresolved items</li>
+                                <li>Collect feedback on the process for improvement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Handling Disagreements</h3>
+                    </div>
+                    <div class="strategy-content">
+                        <div class="disagreement-framework">
+                            <div class="approach">
+                                <h4>1. Understand the Root Cause</h4>
+                                <p>Different perspectives often stem from:</p>
+                                <ul>
+                                    <li>Different assumptions about user behavior</li>
+                                    <li>Varying understanding of technical complexity</li>
+                                    <li>Different strategic priorities or contexts</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="approach">
+                                <h4>2. Use Data to Resolve Conflicts</h4>
+                                <p>When disagreements arise:</p>
+                                <ul>
+                                    <li>Reference user research or analytics data</li>
+                                    <li>Consult engineering for effort estimates</li>
+                                    <li>Look at comparable features' performance</li>
+                                    <li>Agree on what evidence would change minds</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="approach">
+                                <h4>3. Escalation Guidelines</h4>
+                                <p>When consensus isn't possible:</p>
+                                <ul>
+                                    <li>Defer to the person closest to the user/problem</li>
+                                    <li>Choose the more conservative estimate when uncertain</li>
+                                    <li>Escalate strategic disagreements to leadership</li>
+                                    <li>Document the disagreement and reasoning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <i class="fas fa-sync"></i>
+                        <h3>Maintaining Calibration</h3>
+                    </div>
+                    <div class="strategy-content">
+                        <div class="calibration-techniques">
+                            <h4>Monthly Calibration Sessions</h4>
+                            <p>Regular sessions to ensure consistent scoring across the team:</p>
+                            <ul>
+                                <li>Review 3-5 previously scored features</li>
+                                <li>Discuss whether scores still seem accurate</li>
+                                <li>Identify and address scoring drift</li>
+                                <li>Update guidelines based on learnings</li>
+                            </ul>
+                            
+                            <h4>Cross-Team Validation</h4>
+                            <p>For larger organizations with multiple product teams:</p>
+                            <ul>
+                                <li>Share scoring examples across teams</li>
+                                <li>Run joint scoring sessions for similar features</li>
+                                <li>Create organization-wide scoring benchmarks</li>
+                                <li>Regular inter-team calibration meetings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Framework-Specific Tips -->
+        <section id="framework-specific" class="practices-section">
+            <h2>Framework-Specific Best Practices</h2>
+            
+            <div class="framework-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showFrameworkTab('rice')">RICE</button>
+                    <button class="tab-btn" onclick="showFrameworkTab('moscow')">MoSCoW</button>
+                    <button class="tab-btn" onclick="showFrameworkTab('okr')">OKRs</button>
+                    <button class="tab-btn" onclick="showFrameworkTab('heart')">HEART</button>
+                    <button class="tab-btn" onclick="showFrameworkTab('kano')">Kano Model</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="rice-tab" class="framework-tab active">
+                        <h3>RICE Framework Best Practices</h3>
+                        <div class="framework-tips">
+                            <div class="tip-section">
+                                <h4>Reach Scoring Tips</h4>
+                                <ul>
+                                    <li>Use actual user counts when possible, not percentages</li>
+                                    <li>Define the time period clearly (monthly, quarterly)</li>
+                                    <li>Consider indirect reach (viral effects, word of mouth)</li>
+                                    <li>Use orders of magnitude when uncertain (100, 1000, 10000)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Impact Scoring Guidelines</h4>
+                                <ul>
+                                    <li>3 = Massive impact (fundamental to user success)</li>
+                                    <li>2 = High impact (significantly improves experience)</li>
+                                    <li>1 = Medium impact (noticeable improvement)</li>
+                                    <li>0.5 = Low impact (slight improvement)</li>
+                                    <li>0.25 = Minimal impact (barely noticeable)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Common RICE Mistakes</h4>
+                                <ul>
+                                    <li>Conflating reach with market size</li>
+                                    <li>Using percentage instead of absolute numbers for reach</li>
+                                    <li>Overestimating confidence without data</li>
+                                    <li>Underestimating effort by ignoring edge cases</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="moscow-tab" class="framework-tab">
+                        <h3>MoSCoW Method Best Practices</h3>
+                        <div class="framework-tips">
+                            <div class="tip-section">
+                                <h4>Category Guidelines</h4>
+                                <ul>
+                                    <li><strong>Must Have:</strong> Core functionality, legal requirements, critical user flows</li>
+                                    <li><strong>Should Have:</strong> Important but not critical, can be delayed if needed</li>
+                                    <li><strong>Could Have:</strong> Nice to have features that add value</li>
+                                    <li><strong>Won't Have:</strong> Out of scope for this release</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Distribution Guidelines</h4>
+                                <ul>
+                                    <li>Must Have: ~60% of features/effort</li>
+                                    <li>Should Have: ~20% of features/effort</li>
+                                    <li>Could Have: ~20% of features/effort</li>
+                                    <li>If everything is "Must Have," revisit scope or timeline</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Common MoSCoW Pitfalls</h4>
+                                <ul>
+                                    <li>Too many features in "Must Have" category</li>
+                                    <li>Using categories as priority ordering</li>
+                                    <li>Not revisiting categories as scope changes</li>
+                                    <li>Stakeholder pressure inflating categories</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="okr-tab" class="framework-tab">
+                        <h3>OKRs Framework Best Practices</h3>
+                        <div class="framework-tips">
+                            <div class="tip-section">
+                                <h4>Writing Great Objectives</h4>
+                                <ul>
+                                    <li>Make them inspiring and memorable</li>
+                                    <li>Focus on outcomes, not outputs</li>
+                                    <li>Limit to 3-5 objectives per quarter</li>
+                                    <li>Ensure alignment with company strategy</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Crafting Measurable Key Results</h4>
+                                <ul>
+                                    <li>3-5 key results per objective</li>
+                                    <li>Include baseline and target values</li>
+                                    <li>Mix leading and lagging indicators</li>
+                                    <li>Aim for 70% achievement rate</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>OKR Management Tips</h4>
+                                <ul>
+                                    <li>Weekly check-ins on progress</li>
+                                    <li>Monthly confidence scoring</li>
+                                    <li>Quarterly retrospectives</li>
+                                    <li>Public visibility across organization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="heart-tab" class="framework-tab">
+                        <h3>HEART Framework Best Practices</h3>
+                        <div class="framework-tips">
+                            <div class="tip-section">
+                                <h4>Metric Selection Guidelines</h4>
+                                <ul>
+                                    <li><strong>Happiness:</strong> NPS, satisfaction surveys, sentiment analysis</li>
+                                    <li><strong>Engagement:</strong> DAU/MAU, session duration, feature usage</li>
+                                    <li><strong>Adoption:</strong> New user activation, feature adoption rates</li>
+                                    <li><strong>Retention:</strong> Churn rate, repeat usage, subscription renewal</li>
+                                    <li><strong>Task Success:</strong> Completion rates, error rates, time to complete</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Implementation Strategy</h4>
+                                <ul>
+                                    <li>Start with 1-2 metrics per HEART dimension</li>
+                                    <li>Focus on metrics you can actually influence</li>
+                                    <li>Set up proper tracking infrastructure first</li>
+                                    <li>Establish baselines before making changes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="kano-tab" class="framework-tab">
+                        <h3>Kano Model Best Practices</h3>
+                        <div class="framework-tips">
+                            <div class="tip-section">
+                                <h4>Survey Design Tips</h4>
+                                <ul>
+                                    <li>Use both functional and dysfunctional questions</li>
+                                    <li>Keep surveys under 20 questions</li>
+                                    <li>Test with small group before full deployment</li>
+                                    <li>Provide clear feature descriptions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tip-section">
+                                <h4>Category Interpretation</h4>
+                                <ul>
+                                    <li><strong>Basic:</strong> Must implement, but won't differentiate</li>
+                                    <li><strong>Performance:</strong> More is better, linear satisfaction</li>
+                                    <li><strong>Excitement:</strong> Unexpected delighters, high differentiation</li>
+                                    <li><strong>Indifferent:</strong> Users don't care, consider removing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Measurement and Success -->
+        <section id="measurement" class="practices-section">
+            <h2>Measuring Framework Success</h2>
+            
+            <div class="measurement-framework">
+                <div class="measurement-card">
+                    <h3>Leading Indicators</h3>
+                    <p>Metrics that predict future success</p>
+                    <ul>
+                        <li>Framework adoption rate across teams</li>
+                        <li>Time spent in prioritization discussions</li>
+                        <li>Stakeholder satisfaction with process</li>
+                        <li>Consistency of scoring across teams</li>
+                        <li>Speed of prioritization decisions</li>
+                    </ul>
+                </div>
+                
+                <div class="measurement-card">
+                    <h3>Lagging Indicators</h3>
+                    <p>Metrics that show realized outcomes</p>
+                    <ul>
+                        <li>Success rate of prioritized features</li>
+                        <li>Goal achievement vs. predictions</li>
+                        <li>Resource utilization efficiency</li>
+                        <li>Product KPI improvements</li>
+                        <li>Team alignment and satisfaction</li>
+                    </ul>
+                </div>
+                
+                <div class="measurement-card">
+                    <h3>Success Criteria</h3>
+                    <p>Benchmarks for effective implementation</p>
+                    <ul>
+                        <li>80%+ team adoption within 3 months</li>
+                        <li>50%+ reduction in prioritization time</li>
+                        <li>Improved predictive accuracy over time</li>
+                        <li>Increased stakeholder alignment scores</li>
+                        <li>Higher product success metrics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="success-dashboard">
+                <h3>Framework Health Dashboard</h3>
+                <div class="dashboard-metrics">
+                    <div class="metric-widget">
+                        <div class="metric-title">Adoption Rate</div>
+                        <div class="metric-value">87%</div>
+                        <div class="metric-trend positive">↗ +12% this month</div>
+                    </div>
+                    <div class="metric-widget">
+                        <div class="metric-title">Decision Speed</div>
+                        <div class="metric-value">2.3 days</div>
+                        <div class="metric-trend positive">↗ 40% faster</div>
+                    </div>
+                    <div class="metric-widget">
+                        <div class="metric-title">Prediction Accuracy</div>
+                        <div class="metric-value">73%</div>
+                        <div class="metric-trend positive">↗ +8% this quarter</div>
+                    </div>
+                    <div class="metric-widget">
+                        <div class="metric-title">Team Satisfaction</div>
+                        <div class="metric-value">8.2/10</div>
+                        <div class="metric-trend neutral">→ Stable</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="quick-reference">
+            <h2>Quick Reference Checklist</h2>
+            <div class="reference-grid">
+                <div class="reference-card">
+                    <h3>Before Starting</h3>
+                    <ul class="checklist">
+                        <li>Assess current process pain points</li>
+                        <li>Choose framework aligned with team needs</li>
+                        <li>Get stakeholder buy-in</li>
+                        <li>Set success metrics</li>
+                        <li>Plan pilot approach</li>
+                    </ul>
+                </div>
+                
+                <div class="reference-card">
+                    <h3>During Implementation</h3>
+                    <ul class="checklist">
+                        <li>Start simple, iterate often</li>
+                        <li>Train team thoroughly</li>
+                        <li>Document decisions and reasoning</li>
+                        <li>Maintain scoring consistency</li>
+                        <li>Gather continuous feedback</li>
+                    </ul>
+                </div>
+                
+                <div class="reference-card">
+                    <h3>Ongoing Optimization</h3>
+                    <ul class="checklist">
+                        <li>Track outcomes vs. predictions</li>
+                        <li>Run regular retrospectives</li>
+                        <li>Calibrate scoring periodically</li>
+                        <li>Refine based on learnings</li>
+                        <li>Share best practices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product Frameworks Guide</h3>
+                <p>Making product decisions easier, one framework at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        function showFrameworkTab(framework) {
+            // Hide all tabs
+            document.querySelectorAll('.framework-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(framework + '-tab').classList.add('active');
+            
+            // Activate selected button
+            event.target.classList.add('active');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Progress tracking for checklist items
+        document.querySelectorAll('.checklist li').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('completed');
+            });
+        });
+    </script>
+</body>
+</html>

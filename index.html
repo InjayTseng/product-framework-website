@@ -27,7 +27,12 @@
                 <li><a href="#frameworks" data-i18n="nav.frameworks">Frameworks</a></li>
                 <li><a href="#about" data-i18n="nav.about">About</a></li>
                 <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
+                <li><a href="#pm-knowledge">PM Knowledge</a></li>
                 <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search frameworks..." class="search-input">
+                </a></li>
             </ul>
             <div class="language-switcher"></div>
             <button id="pwa-install" style="display: none;" class="install-button">
@@ -46,26 +51,113 @@
             </div>
         </section>
 
+        <!-- Interactive Tutorial Overlay -->
+        <div id="tutorial-overlay" class="tutorial-overlay hidden">
+            <div class="tutorial-content">
+                <div class="tutorial-header">
+                    <h3>Welcome to Product Frameworks!</h3>
+                    <button class="tutorial-close" onclick="closeTutorial()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="tutorial-body">
+                    <div class="tutorial-step active" data-step="1">
+                        <h4>🎯 Start Your Journey</h4>
+                        <p>This guide will help you find the perfect framework for your product decisions. Let's begin!</p>
+                        <div class="tutorial-navigation">
+                            <button class="btn-tutorial" onclick="nextTutorialStep()">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="tutorial-step" data-step="2">
+                        <h4>🔍 Explore Frameworks</h4>
+                        <p>Browse our 6 categories of frameworks. Click on any category to dive deeper into specific methodologies.</p>
+                        <div class="tutorial-navigation">
+                            <button class="btn-tutorial secondary" onclick="prevTutorialStep()">Back</button>
+                            <button class="btn-tutorial" onclick="nextTutorialStep()">Next</button>
+                        </div>
+                    </div>
+                    <div class="tutorial-step" data-step="3">
+                        <h4>📊 Compare & Choose</h4>
+                        <p>Use our interactive comparison tool to find the framework that best fits your team and situation.</p>
+                        <div class="tutorial-navigation">
+                            <button class="btn-tutorial secondary" onclick="prevTutorialStep()">Back</button>
+                            <button class="btn-tutorial" onclick="nextTutorialStep()">Next</button>
+                        </div>
+                    </div>
+                    <div class="tutorial-step" data-step="4">
+                        <h4>🚀 Practice & Learn</h4>
+                        <p>Test your knowledge with quizzes, use interactive calculators, and track your progress!</p>
+                        <div class="tutorial-navigation">
+                            <button class="btn-tutorial secondary" onclick="prevTutorialStep()">Back</button>
+                            <button class="btn-tutorial" onclick="closeTutorial()">Start Exploring</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tutorial-progress">
+                    <div class="progress-dots">
+                        <span class="dot active" data-step="1"></span>
+                        <span class="dot" data-step="2"></span>
+                        <span class="dot" data-step="3"></span>
+                        <span class="dot" data-step="4"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section id="frameworks" class="framework-categories">
-            <h2 data-i18n="categories.title">Framework Categories</h2>
+            <div class="section-header">
+                <h2 data-i18n="categories.title">Framework Categories</h2>
+                <button class="help-trigger" onclick="showTutorial()" title="Take a guided tour">
+                    <i class="fas fa-question-circle"></i> Take Tour
+                </button>
+            </div>
             <div class="category-grid">
-                <a href="frameworks/Product-Priority.html" class="category-card">
+                <div class="category-card interactive-card" data-category="priority">
                     <div class="category-content">
                         <div class="category-header">
                             <i class="fas fa-list-ol"></i>
                             <h3 data-i18n="categories.priority.title">Priority Frameworks</h3>
+                            <div class="card-actions">
+                                <button class="action-btn quiz-btn" onclick="startQuiz('priority')" title="Take Quiz">
+                                    <i class="fas fa-brain"></i>
+                                </button>
+                                <button class="action-btn tutorial-btn" onclick="startFrameworkTutorial('priority')" title="Interactive Tutorial">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <a href="frameworks/Product-Priority.html" class="action-btn" title="Learn More">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                         <p data-i18n="categories.priority.description">Make data-driven decisions on what to build next</p>
-                        <ul>
-                            <li><i class="fas fa-calculator"></i> RICE Framework</li>
-                            <li><i class="fas fa-tasks"></i> MoSCoW Method</li>
-                            <li><i class="fas fa-balance-scale"></i> Value vs Effort</li>
-                            <li><i class="fas fa-chart-line"></i> ICE Scoring</li>
-                            <li><i class="fas fa-weight"></i> Weighted Scoring</li>
-                            <li><i class="fas fa-chart-bar"></i> Kano Model</li>
-                        </ul>
+                        <div class="framework-list">
+                            <div class="framework-item" data-tooltip="Quantitative prioritization using Reach, Impact, Confidence, Effort">
+                                <i class="fas fa-calculator"></i> RICE Framework
+                            </div>
+                            <div class="framework-item" data-tooltip="Categorize features as Must, Should, Could, Won't have">
+                                <i class="fas fa-tasks"></i> MoSCoW Method
+                            </div>
+                            <div class="framework-item" data-tooltip="Plot features on value vs implementation effort matrix">
+                                <i class="fas fa-balance-scale"></i> Value vs Effort
+                            </div>
+                            <div class="framework-item" data-tooltip="Quick scoring using Impact, Confidence, Ease">
+                                <i class="fas fa-chart-line"></i> ICE Scoring
+                            </div>
+                            <div class="framework-item" data-tooltip="Assign weights to different criteria for scoring">
+                                <i class="fas fa-weight"></i> Weighted Scoring
+                            </div>
+                            <div class="framework-item" data-tooltip="Understand customer satisfaction vs feature implementation">
+                                <i class="fas fa-chart-bar"></i> Kano Model
+                            </div>
+                        </div>
+                        <div class="card-progress">
+                            <div class="progress-label">Your Progress</div>
+                            <div class="progress-bar-small">
+                                <div class="progress-fill-small" style="width: 0%" data-progress="priority"></div>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                </div>
 
                 <a href="frameworks/Product-Discovery.html" class="category-card">
                     <div class="category-content">
@@ -189,10 +281,85 @@
             </div>
             
             <div class="framework-comparison">
-                <h3>Framework Comparison</h3>
-                <p>See how different frameworks compare across key dimensions</p>
+                <h3>Interactive Framework Comparison</h3>
+                <p>Compare frameworks across multiple dimensions and find the best fit for your needs</p>
+                
+                <div class="comparison-controls">
+                    <div class="filter-group">
+                        <label>Select Frameworks to Compare:</label>
+                        <div class="framework-checkboxes">
+                            <label><input type="checkbox" value="RICE" checked> RICE</label>
+                            <label><input type="checkbox" value="MoSCoW" checked> MoSCoW</label>
+                            <label><input type="checkbox" value="Kano" checked> Kano Model</label>
+                            <label><input type="checkbox" value="ICE" checked> ICE Scoring</label>
+                            <label><input type="checkbox" value="Value-Effort" checked> Value vs Effort</label>
+                        </div>
+                    </div>
+                    
+                    <div class="dimension-group">
+                        <label>Compare by:</label>
+                        <select id="comparison-dimension">
+                            <option value="ease">Ease of Use</option>
+                            <option value="accuracy">Accuracy</option>
+                            <option value="speed">Speed</option>
+                            <option value="team-buy-in">Team Buy-in</option>
+                        </select>
+                    </div>
+                </div>
+                
                 <div class="comparison-chart-container">
                     <canvas id="frameworkComparisonChart"></canvas>
+                </div>
+                
+                <div class="comparison-table">
+                    <table id="framework-comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Framework</th>
+                                <th>Best For</th>
+                                <th>Time Required</th>
+                                <th>Team Size</th>
+                                <th>Complexity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RICE</strong></td>
+                                <td>Data-driven teams with clear metrics</td>
+                                <td>High</td>
+                                <td>3-8 people</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MoSCoW</strong></td>
+                                <td>Feature categorization & requirement gathering</td>
+                                <td>Low</td>
+                                <td>Any size</td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kano Model</strong></td>
+                                <td>Understanding customer satisfaction</td>
+                                <td>High</td>
+                                <td>5-10 people</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ICE Scoring</strong></td>
+                                <td>Quick prioritization with limited data</td>
+                                <td>Low</td>
+                                <td>2-5 people</td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Value vs Effort</strong></td>
+                                <td>Visual prioritization & stakeholder alignment</td>
+                                <td>Medium</td>
+                                <td>3-6 people</td>
+                                <td>Low</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -201,23 +368,330 @@
             <h2 data-i18n="resources.title">Additional Resources</h2>
             <div class="resources-grid">
                 <div class="resource-card">
-                    <h3>Templates</h3>
+                    <div class="resource-header">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Templates</h3>
+                    </div>
                     <p>Ready-to-use templates for each framework</p>
-                    <a href="docs/templates.html" class="resource-link">View Templates</a>
+                    <div class="resource-features">
+                        <span class="feature-tag">6 Frameworks</span>
+                        <span class="feature-tag">Interactive Generator</span>
+                        <span class="feature-tag">Multiple Formats</span>
+                    </div>
+                    <a href="docs/templates.html" class="resource-link">
+                        <i class="fas fa-arrow-right"></i>
+                        View Templates
+                    </a>
                 </div>
                 <div class="resource-card">
-                    <h3>Case Studies</h3>
+                    <div class="resource-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Case Studies</h3>
+                    </div>
                     <p>Real-world applications and success stories</p>
-                    <a href="docs/case-studies.html" class="resource-link">Read Cases</a>
+                    <div class="resource-features">
+                        <span class="feature-tag">6 Companies</span>
+                        <span class="feature-tag">Proven Results</span>
+                        <span class="feature-tag">Detailed Analysis</span>
+                    </div>
+                    <a href="docs/case-studies.html" class="resource-link">
+                        <i class="fas fa-arrow-right"></i>
+                        Read Cases
+                    </a>
                 </div>
                 <div class="resource-card">
-                    <h3>Best Practices</h3>
+                    <div class="resource-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Best Practices</h3>
+                    </div>
                     <p>Tips and guidelines for implementation</p>
-                    <a href="docs/best-practices.html" class="resource-link">Learn More</a>
+                    <div class="resource-features">
+                        <span class="feature-tag">Expert Tips</span>
+                        <span class="feature-tag">Implementation Guide</span>
+                        <span class="feature-tag">Common Pitfalls</span>
+                    </div>
+                    <a href="docs/best-practices.html" class="resource-link">
+                        <i class="fas fa-arrow-right"></i>
+                        Learn More
+                    </a>
                 </div>
             </div>
         </section>
         
+        <section id="pm-knowledge" class="pm-knowledge-section">
+            <h2>Product Manager Knowledge Hub</h2>
+            <p class="section-intro">Comprehensive resources to level up your product management skills</p>
+            
+            <div class="knowledge-grid">
+                <div class="knowledge-category">
+                    <div class="knowledge-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Core PM Skills</h3>
+                    </div>
+                    <div class="knowledge-content">
+                        <div class="skill-item">
+                            <h4>Strategic Thinking</h4>
+                            <p>Learn to think long-term and align product decisions with business goals</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>User Research</h4>
+                            <p>Master techniques for understanding user needs and validating assumptions</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Data Analysis</h4>
+                            <p>Develop skills in metrics, analytics, and data-driven decision making</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="knowledge-category">
+                    <div class="knowledge-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>PM Tools & Techniques</h3>
+                    </div>
+                    <div class="knowledge-content">
+                        <div class="tool-item">
+                            <h4>Wireframing</h4>
+                            <p>Create effective wireframes and mockups</p>
+                            <a href="#" class="knowledge-link">Learn More</a>
+                        </div>
+                        <div class="tool-item">
+                            <h4>A/B Testing</h4>
+                            <p>Design and analyze experiments</p>
+                            <a href="#" class="knowledge-link">Learn More</a>
+                        </div>
+                        <div class="tool-item">
+                            <h4>Stakeholder Management</h4>
+                            <p>Align diverse stakeholders and manage expectations</p>
+                            <a href="#" class="knowledge-link">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="knowledge-category">
+                    <div class="knowledge-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Decision Making</h3>
+                    </div>
+                    <div class="knowledge-content">
+                        <div class="decision-framework">
+                            <h4>The PM Decision Tree</h4>
+                            <div class="decision-tree">
+                                <div class="decision-node">
+                                    <div class="node-question">Does this align with our strategy?</div>
+                                    <div class="node-branches">
+                                        <div class="branch yes">Yes → Continue</div>
+                                        <div class="branch no">No → Reassess</div>
+                                    </div>
+                                </div>
+                                <div class="decision-node">
+                                    <div class="node-question">Do we have user validation?</div>
+                                    <div class="node-branches">
+                                        <div class="branch yes">Yes → Prioritize</div>
+                                        <div class="branch no">No → Research</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="learning-path">
+                <h3>Recommended Learning Path</h3>
+                <div class="path-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Foundation</h4>
+                            <p>Learn core PM concepts and frameworks</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Practice</h4>
+                            <p>Apply frameworks to real scenarios</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Advanced</h4>
+                            <p>Master complex prioritization and strategy</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Leadership</h4>
+                            <p>Develop team and stakeholder management skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz Modal -->
+        <div id="quiz-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="quiz-title">Framework Knowledge Quiz</h3>
+                    <button class="modal-close" onclick="closeQuiz()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="quiz-content">
+                        <div class="quiz-question">
+                            <h4 id="question-text">Loading question...</h4>
+                            <div id="question-options" class="quiz-options">
+                                <!-- Options will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="quiz-controls">
+                            <button id="quiz-prev" class="btn-quiz secondary" onclick="prevQuestion()" disabled>Previous</button>
+                            <span id="quiz-progress">1 of 5</span>
+                            <button id="quiz-next" class="btn-quiz" onclick="nextQuestion()">Next</button>
+                        </div>
+                    </div>
+                    <div id="quiz-results" class="quiz-results hidden">
+                        <div class="results-header">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Quiz Complete!</h4>
+                        </div>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span id="final-score">0</span>
+                                <span class="score-total">/5</span>
+                            </div>
+                        </div>
+                        <div id="quiz-feedback" class="quiz-feedback">
+                            <!-- Feedback will be populated by JavaScript -->
+                        </div>
+                        <div class="quiz-actions">
+                            <button class="btn-quiz" onclick="retakeQuiz()">Retake Quiz</button>
+                            <button class="btn-quiz secondary" onclick="closeQuiz()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="interactive-tools" class="interactive-section">
+            <h2>Interactive Learning Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-sort"></i>
+                        <h3>Drag & Drop Prioritization</h3>
+                    </div>
+                    <p>Practice prioritizing features by dragging them into different categories</p>
+                    <div id="drag-drop-container" class="drag-drop-area">
+                        <div class="priority-column" data-priority="high">
+                            <h4>🔥 High Priority</h4>
+                            <div class="drop-zone" data-zone="high"></div>
+                        </div>
+                        <div class="priority-column" data-priority="medium">
+                            <h4>⚡ Medium Priority</h4>
+                            <div class="drop-zone" data-zone="medium"></div>
+                        </div>
+                        <div class="priority-column" data-priority="low">
+                            <h4>💡 Low Priority</h4>
+                            <div class="drop-zone" data-zone="low"></div>
+                        </div>
+                        <div class="feature-pool">
+                            <h4>📋 Features to Prioritize</h4>
+                            <div class="draggable-item" draggable="true" data-feature="user-auth">
+                                <i class="fas fa-user-lock"></i>
+                                User Authentication
+                                <span class="feature-details">Essential for user security</span>
+                            </div>
+                            <div class="draggable-item" draggable="true" data-feature="dark-mode">
+                                <i class="fas fa-moon"></i>
+                                Dark Mode Toggle
+                                <span class="feature-details">UI enhancement</span>
+                            </div>
+                            <div class="draggable-item" draggable="true" data-feature="export-data">
+                                <i class="fas fa-download"></i>
+                                Export Data
+                                <span class="feature-details">User convenience feature</span>
+                            </div>
+                            <div class="draggable-item" draggable="true" data-feature="notifications">
+                                <i class="fas fa-bell"></i>
+                                Push Notifications
+                                <span class="feature-details">User engagement</span>
+                            </div>
+                            <div class="draggable-item" draggable="true" data-feature="advanced-search">
+                                <i class="fas fa-search-plus"></i>
+                                Advanced Search
+                                <span class="feature-details">Power user feature</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="btn-tool" onclick="resetDragDrop()">Reset</button>
+                        <button class="btn-tool primary" onclick="evaluatePrioritization()">Get Feedback</button>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>RICE Calculator</h3>
+                    </div>
+                    <p>Calculate RICE scores for your features interactively</p>
+                    <div class="rice-calculator">
+                        <div class="input-group">
+                            <label>Reach (people/period)</label>
+                            <input type="number" id="rice-reach" placeholder="e.g., 1000" min="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Impact (1-3 scale)</label>
+                            <select id="rice-impact">
+                                <option value="">Select impact...</option>
+                                <option value="3">Massive (3)</option>
+                                <option value="2">High (2)</option>
+                                <option value="1">Medium (1)</option>
+                                <option value="0.5">Low (0.5)</option>
+                                <option value="0.25">Minimal (0.25)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Confidence (% as decimal)</label>
+                            <select id="rice-confidence">
+                                <option value="">Select confidence...</option>
+                                <option value="1">High (100%)</option>
+                                <option value="0.8">Medium (80%)</option>
+                                <option value="0.5">Low (50%)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Effort (person-months)</label>
+                            <input type="number" id="rice-effort" placeholder="e.g., 2" min="0.1" step="0.1">
+                        </div>
+                        <div class="rice-result">
+                            <div class="score-display-small">
+                                RICE Score: <span id="rice-score">0</span>
+                            </div>
+                            <div class="score-explanation" id="rice-explanation">
+                                Enter values to calculate your RICE score
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="calculator" class="calculator-section">
             <h2>Interactive Framework Calculator</h2>
             <p class="section-intro">Try out different frameworks with your own data to see which works best for your needs.</p>

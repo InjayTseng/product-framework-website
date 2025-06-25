@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ready-to-use templates for product management frameworks including RICE, MoSCoW, Kano Model and more">
+    <title>Framework Templates - Product Framework Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">Product Frameworks</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#frameworks">Frameworks</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="#templates">Templates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="../index.html#resources">Resources</a>
+            <span class="breadcrumb-separator">></span>
+            <span class="current">Templates</span>
+        </nav>
+
+        <section id="templates" class="hero">
+            <h1>Framework Templates</h1>
+            <p>Ready-to-use templates and interactive generators for all product management frameworks</p>
+        </section>
+
+        <section class="template-categories">
+            <div class="category-filter">
+                <h3>Filter by Category:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All Templates</button>
+                    <button class="filter-btn" data-category="prioritization">Prioritization</button>
+                    <button class="filter-btn" data-category="discovery">Discovery</button>
+                    <button class="filter-btn" data-category="strategy">Strategy</button>
+                    <button class="filter-btn" data-category="metrics">Metrics</button>
+                </div>
+            </div>
+
+            <div class="templates-grid">
+                <!-- RICE Framework Template -->
+                <div class="template-card" data-category="prioritization">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>RICE Framework Template</h3>
+                            <span class="template-category">Prioritization</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="action-btn" onclick="generateRiceTemplate()" title="Generate Template">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="action-btn" onclick="downloadTemplate('rice')" title="Download PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-preview">
+                        <div class="preview-table">
+                            <table class="mini-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Reach</th>
+                                        <th>Impact</th>
+                                        <th>Confidence</th>
+                                        <th>Effort</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Feature A</td>
+                                        <td>1000</td>
+                                        <td>3</td>
+                                        <td>0.8</td>
+                                        <td>2</td>
+                                        <td>1200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feature B</td>
+                                        <td>500</td>
+                                        <td>2</td>
+                                        <td>0.9</td>
+                                        <td>1</td>
+                                        <td>900</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="template-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pre-built scoring formula</li>
+                            <li><i class="fas fa-check"></i> Feature comparison table</li>
+                            <li><i class="fas fa-check"></i> Guidance notes included</li>
+                            <li><i class="fas fa-check"></i> Excel & Google Sheets versions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MoSCoW Template -->
+                <div class="template-card" data-category="prioritization">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>MoSCoW Method Template</h3>
+                            <span class="template-category">Prioritization</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="action-btn" onclick="generateMoscowTemplate()" title="Generate Template">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="action-btn" onclick="downloadTemplate('moscow')" title="Download PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-preview">
+                        <div class="moscow-preview">
+                            <div class="moscow-category must">
+                                <h4>Must Have</h4>
+                                <div class="feature-item">User Authentication</div>
+                                <div class="feature-item">Core Functionality</div>
+                            </div>
+                            <div class="moscow-category should">
+                                <h4>Should Have</h4>
+                                <div class="feature-item">Push Notifications</div>
+                                <div class="feature-item">Data Export</div>
+                            </div>
+                            <div class="moscow-category could">
+                                <h4>Could Have</h4>
+                                <div class="feature-item">Dark Mode</div>
+                            </div>
+                            <div class="moscow-category wont">
+                                <h4>Won't Have</h4>
+                                <div class="feature-item">Advanced Analytics</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pre-defined categories</li>
+                            <li><i class="fas fa-check"></i> Feature sorting guide</li>
+                            <li><i class="fas fa-check"></i> Team collaboration format</li>
+                            <li><i class="fas fa-check"></i> Printable workshop version</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- User Story Mapping Template -->
+                <div class="template-card" data-category="discovery">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>User Story Mapping Template</h3>
+                            <span class="template-category">Discovery</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="action-btn" onclick="generateStoryMapTemplate()" title="Generate Template">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="action-btn" onclick="downloadTemplate('story-map')" title="Download PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-preview">
+                        <div class="story-map-preview">
+                            <div class="user-activities">
+                                <div class="activity">Browse</div>
+                                <div class="activity">Select</div>
+                                <div class="activity">Purchase</div>
+                                <div class="activity">Review</div>
+                            </div>
+                            <div class="story-swim-lanes">
+                                <div class="swim-lane">
+                                    <div class="story">View products</div>
+                                    <div class="story">Add to cart</div>
+                                    <div class="story">Checkout</div>
+                                    <div class="story">Rate product</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> User journey structure</li>
+                            <li><i class="fas fa-check"></i> Story prioritization layers</li>
+                            <li><i class="fas fa-check"></i> Workshop facilitation guide</li>
+                            <li><i class="fas fa-check"></i> Digital collaboration tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- OKRs Template -->
+                <div class="template-card" data-category="strategy">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>OKRs Framework Template</h3>
+                            <span class="template-category">Strategy</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="action-btn" onclick="generateOkrTemplate()" title="Generate Template">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="action-btn" onclick="downloadTemplate('okr')" title="Download PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-preview">
+                        <div class="okr-preview">
+                            <div class="objective">
+                                <h4>O: Improve user engagement</h4>
+                                <div class="key-results">
+                                    <div class="kr">KR1: Increase DAU by 25%</div>
+                                    <div class="kr">KR2: Reduce churn by 15%</div>
+                                    <div class="kr">KR3: Improve NPS to 8.5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Objective & KR structure</li>
+                            <li><i class="fas fa-check"></i> Progress tracking sheets</li>
+                            <li><i class="fas fa-check"></i> Quarterly planning format</li>
+                            <li><i class="fas fa-check"></i> Team alignment tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HEART Metrics Template -->
+                <div class="template-card" data-category="metrics">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>HEART Metrics Template</h3>
+                            <span class="template-category">Metrics</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="action-btn" onclick="generateHeartTemplate()" title="Generate Template">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="action-btn" onclick="downloadTemplate('heart')" title="Download PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-preview">
+                        <div class="heart-preview">
+                            <div class="heart-metric">
+                                <div class="metric-letter">H</div>
+                                <div class="metric-name">Happiness</div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-letter">E</div>
+                                <div class="metric-name">Engagement</div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-letter">A</div>
+                                <div class="metric-name">Adoption</div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-letter">R</div>
+                                <div class="metric-name">Retention</div>
+                            </div>
+                            <div class="heart-metric">
+                                <div class="metric-letter">T</div>
+                                <div class="metric-name">Task Success</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Metrics definition guide</li>
+                            <li><i class="fas fa-check"></i> Measurement framework</li>
+                            <li><i class="fas fa-check"></i> Dashboard templates</li>
+                            <li><i class="fas fa-check"></i> Tracking spreadsheets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Value vs Effort Matrix Template -->
+                <div class="template-card" data-category="prioritization">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>Value vs Effort Matrix</h3>
+                            <span class="template-category">Prioritization</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="action-btn" onclick="generateValueEffortTemplate()" title="Generate Template">
+                                <i class="fas fa-magic"></i>
+                            </button>
+                            <button class="action-btn" onclick="downloadTemplate('value-effort')" title="Download PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-preview">
+                        <div class="matrix-preview">
+                            <div class="matrix-quadrant quick-wins">
+                                <h4>Quick Wins</h4>
+                                <small>High Value, Low Effort</small>
+                            </div>
+                            <div class="matrix-quadrant major-projects">
+                                <h4>Major Projects</h4>
+                                <small>High Value, High Effort</small>
+                            </div>
+                            <div class="matrix-quadrant fill-ins">
+                                <h4>Fill-ins</h4>
+                                <small>Low Value, Low Effort</small>
+                            </div>
+                            <div class="matrix-quadrant thankless">
+                                <h4>Thankless Tasks</h4>
+                                <small>Low Value, High Effort</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 2x2 matrix format</li>
+                            <li><i class="fas fa-check"></i> Feature plotting guide</li>
+                            <li><i class="fas fa-check"></i> Interactive plotting tool</li>
+                            <li><i class="fas fa-check"></i> Decision framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Template Generator -->
+        <section id="template-generator" class="generator-section">
+            <h2>Interactive Template Generator</h2>
+            <p>Create customized templates based on your specific needs</p>
+            
+            <div class="generator-interface">
+                <div class="generator-controls">
+                    <div class="control-group">
+                        <label for="framework-select">Select Framework:</label>
+                        <select id="framework-select">
+                            <option value="">Choose a framework...</option>
+                            <option value="rice">RICE Framework</option>
+                            <option value="moscow">MoSCoW Method</option>
+                            <option value="value-effort">Value vs Effort Matrix</option>
+                            <option value="okr">OKRs Framework</option>
+                            <option value="heart">HEART Metrics</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="team-size">Team Size:</label>
+                        <select id="team-size">
+                            <option value="small">Small (2-5 people)</option>
+                            <option value="medium">Medium (6-15 people)</option>
+                            <option value="large">Large (16+ people)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="project-type">Project Type:</label>
+                        <select id="project-type">
+                            <option value="new-product">New Product</option>
+                            <option value="feature-enhancement">Feature Enhancement</option>
+                            <option value="maintenance">Maintenance & Bugs</option>
+                            <option value="strategic">Strategic Initiative</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="output-format">Output Format:</label>
+                        <select id="output-format">
+                            <option value="excel">Excel Spreadsheet</option>
+                            <option value="google-sheets">Google Sheets</option>
+                            <option value="pdf">PDF Worksheet</option>
+                            <option value="miro">Miro Board Template</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn-generate" onclick="generateCustomTemplate()">
+                        <i class="fas fa-magic"></i> Generate Custom Template
+                    </button>
+                </div>
+                
+                <div class="generator-preview" id="template-preview">
+                    <div class="preview-placeholder">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Select framework options to preview your custom template</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Template Usage Guide -->
+        <section class="usage-guide">
+            <h2>How to Use These Templates</h2>
+            <div class="guide-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Your Framework</h3>
+                        <p>Select the framework that best fits your current needs and project context.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Download or Generate</h3>
+                        <p>Use our pre-built templates or generate a custom one tailored to your team.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Customize for Your Project</h3>
+                        <p>Add your features, criteria, and team-specific requirements to the template.</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Collaborate & Iterate</h3>
+                        <p>Work with your team to populate the template and refine your decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product Frameworks Guide</h3>
+                <p>Making product decisions easier, one framework at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+    <script>
+        // Template filtering functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter templates
+                const category = this.dataset.category;
+                document.querySelectorAll('.template-card').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Template generation functions
+        function generateRiceTemplate() {
+            // Implementation for RICE template generation
+            showTemplateModal('RICE Framework Template', 'rice');
+        }
+
+        function generateMoscowTemplate() {
+            showTemplateModal('MoSCoW Method Template', 'moscow');
+        }
+
+        function generateStoryMapTemplate() {
+            showTemplateModal('User Story Mapping Template', 'story-map');
+        }
+
+        function generateOkrTemplate() {
+            showTemplateModal('OKRs Framework Template', 'okr');
+        }
+
+        function generateHeartTemplate() {
+            showTemplateModal('HEART Metrics Template', 'heart');
+        }
+
+        function generateValueEffortTemplate() {
+            showTemplateModal('Value vs Effort Matrix Template', 'value-effort');
+        }
+
+        function downloadTemplate(type) {
+            // Simulate template download
+            const link = document.createElement('a');
+            link.href = '#';
+            link.download = `${type}-template.pdf`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show success message
+            showNotification(`${type} template downloaded successfully!`, 'success');
+        }
+
+        function generateCustomTemplate() {
+            const framework = document.getElementById('framework-select').value;
+            const teamSize = document.getElementById('team-size').value;
+            const projectType = document.getElementById('project-type').value;
+            const outputFormat = document.getElementById('output-format').value;
+            
+            if (!framework) {
+                showNotification('Please select a framework first', 'warning');
+                return;
+            }
+            
+            // Generate custom template based on selections
+            showNotification(`Custom ${framework} template generated for ${teamSize} team!`, 'success');
+        }
+
+        function showTemplateModal(title, type) {
+            // Create and show modal with template details
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>${title}</h3>
+                        <button class="modal-close" onclick="this.closest('.modal').remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Your ${title.toLowerCase()} has been generated and is ready for use.</p>
+                        <div class="template-actions-modal">
+                            <button class="btn-download" onclick="downloadTemplate('${type}')">
+                                <i class="fas fa-download"></i> Download PDF
+                            </button>
+                            <button class="btn-copy">
+                                <i class="fas fa-copy"></i> Copy Template URL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#28a745' : type === 'warning' ? '#ffc107' : '#dc3545'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 4px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

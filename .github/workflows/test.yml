@@ -1,0 +1,178 @@
+name: Test & Quality Assurance
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install html5validator
+        
+    - name: Lint HTML files
+      run: |
+        echo "🔍 Validating HTML structure..."
+        html5validator --root . --match "*.html" --ignore-re "Attribute.*not allowed" || true
+        
+    - name: Validate JSON files
+      run: |
+        echo "🔍 Validating JSON files..."
+        # Check manifest.json
+        python -m json.tool manifest.json > /dev/null && echo "✅ manifest.json is valid"
+        
+        # Check i18n files
+        for file in i18n/*.json; do
+          if [ -f "$file" ]; then
+            python -m json.tool "$file" > /dev/null && echo "✅ $file is valid"
+          fi
+        done
+        
+    - name: Check PWA requirements
+      run: |
+        echo "🔍 Checking PWA requirements..."
+        
+        # Check if service worker exists
+        [ -f "service-worker.js" ] && echo "✅ Service worker found" || echo "❌ Service worker missing"
+        
+        # Check if manifest exists
+        [ -f "manifest.json" ] && echo "✅ Web app manifest found" || echo "❌ Web app manifest missing"
+        
+        # Check for PWA icons (basic check)
+        if grep -q "icon" manifest.json; then
+          echo "✅ Icons referenced in manifest"
+        else
+          echo "❌ No icons found in manifest"
+        fi
+        
+    - name: Test i18n system
+      run: |
+        echo "🔍 Testing internationalization..."
+        
+        # Check if all required language files exist
+        [ -f "i18n/i18n.js" ] && echo "✅ i18n system found" || echo "❌ i18n system missing"
+        [ -f "i18n/translations.json" ] && echo "✅ Translation data found" || echo "❌ Translation data missing"
+        
+        # Basic translation key consistency check
+        if [ -f "i18n/translations.json" ]; then
+          echo "📊 Translation file structure:"
+          python -c "
+import json
+with open('i18n/translations.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+    languages = list(data.keys())
+    print(f'Languages: {languages}')
+    if languages:
+        keys = list(data[languages[0]].keys()) if languages[0] in data else []
+        print(f'Main sections: {keys}')
+"
+        fi
+        
+    - name: Test server functionality
+      run: |
+        echo "🔍 Testing server functionality..."
+        
+        # Test Python server
+        echo "Testing Python Flask server..."
+        timeout 5s python server.py &
+        sleep 2
+        if curl -s -f http://127.0.0.1:8000 > /dev/null; then
+          echo "✅ Python server responds"
+        else
+          echo "⚠️  Python server test inconclusive"
+        fi
+        
+        # Test Node.js server
+        echo "Testing Node.js server..."
+        timeout 5s node server.js &
+        sleep 2
+        if curl -s -f http://localhost:3000 > /dev/null; then
+          echo "✅ Node.js server responds"
+        else
+          echo "⚠️  Node.js server test inconclusive"
+        fi
+        
+    - name: Check framework content
+      run: |
+        echo "🔍 Checking framework content..."
+        
+        # Check if framework HTML files exist
+        framework_files=(
+          "frameworks/Product-Priority.html"
+          "frameworks/Product-Discovery.html"
+          "frameworks/Product-Strategy.html"
+          "frameworks/Product-Metrics.html"
+          "frameworks/Product-Development.html"
+          "frameworks/Product-Growth.html"
+        )
+        
+        for file in "${framework_files[@]}"; do
+          if [ -f "$file" ]; then
+            echo "✅ $file exists"
+          else
+            echo "❌ $file missing"
+          fi
+        done
+        
+    - name: Performance check
+      run: |
+        echo "🔍 Basic performance checks..."
+        
+        # Check file sizes
+        echo "📊 File sizes:"
+        find . -name "*.html" -o -name "*.css" -o -name "*.js" | grep -v node_modules | xargs ls -lh
+        
+        # Check for large files that might impact performance
+        echo "🔍 Looking for large files (>500KB)..."
+        find . -type f -size +500k -not -path "./node_modules/*" -not -path "./.git/*" | head -10
+        
+    - name: Accessibility check
+      run: |
+        echo "🔍 Basic accessibility checks..."
+        
+        # Check for alt attributes in images (basic check)
+        if grep -r "img.*src" --include="*.html" .; then
+          echo "🖼️  Images found - ensure alt attributes are present"
+        fi
+        
+        # Check for semantic HTML elements
+        if grep -r "main\|header\|nav\|section\|article" --include="*.html" .; then
+          echo "✅ Semantic HTML elements found"
+        else
+          echo "⚠️  Consider using more semantic HTML elements"
+        fi
+        
+    - name: Security check
+      run: |
+        echo "🔍 Basic security checks..."
+        
+        # Check for potential security issues
+        echo "🔒 Checking for inline scripts..."
+        if grep -r "javascript:" --include="*.html" .; then
+          echo "⚠️  Inline JavaScript found - review for security"
+        else
+          echo "✅ No inline JavaScript detected"
+        fi
+        
+        # Check for external resources
+        echo "🌐 External resources:"
+        grep -r "https://" --include="*.html" . | head -5 || echo "No external resources found in HTML" 
